@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500&family=Open+Sans:wght@500&display=swap");
+.body {
+  background: #2E2727;
+}
+
+.main {
+  width: 100%;
+  height: 100%;
+}
+
+.container {
+  width: 80%;
+  height: 100%;
+  background: #2E2727;
+}
+.container_header {
+  display: flex;
+  align-items: center;
+  background: #2E2727;
+  width: 100%;
+  height: 112px;
+}
+.container_header_logo {
+  margin-right: 10%;
+  width: 164px;
+  height: 65px;
+}
+.container_header_pages {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container_header_pages_page {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 42px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #A0A0A0;
+}
+.container_header_pages_page-active {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 42px;
+  color: #FFFFFF;
+  text-shadow: 0px 0px 10px #FFFFFF;
+}
+.container_header_pages_page {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 42px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  color: #FFFFFF;
+}
+.container_header_pages_logo {
+  width: 50px;
+  height: 50px;
+}
+.container_header_pages_switch-lang {
+  border-radius: 10px;
+  background: #2E2727;
+  border: none;
+}
+.container_header_pages_switch-lang_link {
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  color: #A0A0A0;
+  font-size: 20px;
+  line-height: 42px;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+.container_products {
+  margin-top: 5%;
+  width: 100%;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.container_products_product {
+  display: flex;
+  flex-direction: column;
+  width: 261px;
+  height: 342px;
+  background: #524B4B;
+  border-radius: 12px;
+}
+.container_products_product_img {
+  width: 261px;
+  height: 166px;
+  background: url(./shoe-1.png);
+}
+.container_products_product_title {
+  width: 80%;
+  margin-top: 8%;
+  margin-left: 10%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #FFFFFF;
+}
+.container_products_product_price {
+  width: 80%;
+  margin-top: 8%;
+  margin-left: 10%;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 18px;
+  color: #C2FF92;
+}
+.container_products_product_btn {
+  width: 90%;
+  height: 12%;
+  margin-top: 11%;
+  margin-left: 5%;
+  border: none;
+  background: #7DA0FC;
+  border-radius: 6px;
+}/*# sourceMappingURL=style.css.map */
