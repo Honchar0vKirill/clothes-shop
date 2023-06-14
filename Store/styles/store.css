@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Poppins&family=Raleway:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@1,300&family=Rubik:wght@400;500;600;700&display=swap");
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 132px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header_nav {
+  margin-left: -20px;
+}
+.header_nav_ul {
+  width: 100%;
+  display: flex;
+}
+.header_nav_ul .list_element {
+  margin-left: 30px;
+}
+.header_nav_ul .list_element a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+}
+.header_nav_ul .active-list_element a {
+  color: #FFFFFF;
+  text-shadow: 0px 0px 10px #FFFFFF;
+}
+.header .change-language {
+  display: flex;
+  align-items: center;
+}
+.header .change-language_hr {
+  height: 50px;
+  margin: 0px 20px;
+}
+.header .change-language_button {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.header .change-language_active-button {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+.header .burger-menu {
+  display: none;
+  opacity: 0;
+}
+.header .burger-menu hr {
+  width: 30px;
+}
+
+.burger-menu_animationTurnOn {
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOn .upper-hr {
+  transform: rotate(-45deg) translateY(6px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOn .center-hr {
+  transform: rotate(45deg) translateY(-6px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOn .bottom-hr {
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.burger-menu_animationTurnOf {
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOf .upper-hr {
+  transform: rotate(0deg) translateY(0px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOf .center-hr {
+  transform: rotate(0deg) translateY(0px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOf .bottom-hr {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.opened-block {
+  background: #262020;
+  width: 100vw;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.opened-block .nav-menu {
+  width: 100%;
+}
+.opened-block .nav-menu_ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.opened-block .menu_change-language_wrapper {
+  height: 50%;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.opened-block .menu_change-language_wrapper .menu_change-language {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.opened-block .menu_change-language_wrapper .menu_change-language_hr {
+  height: 50px;
+}
+.opened-block .menu_change-language_wrapper .menu_change-language_active-button {
+  color: #FFFFFF;
+  text-shadow: 0px 0px 10px #FFFFFF;
+}
+
+.displayBlock {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 0.5s;
+}
+
+.displayNone {
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.5s;
+}/*# sourceMappingURL=store.css.map */
