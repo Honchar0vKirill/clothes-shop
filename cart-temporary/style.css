@@ -1,0 +1,80 @@
+.container {
+    width: 80% ;
+    display: flex; 
+    justify-content: center;
+    height: 100%;
+
+    
+}
+.block {
+    margin: auto;
+    width: 100%;
+    height: 70%;
+    background-color: #3F3535;
+}
+.svg {
+    display: flex;
+    justify-content:flex-end;
+    padding-right: 1%;
+    padding-top: 1%;
+}
+.cart {
+    display: flex;
+    justify-content: space-around;
+    display: flex;}
+.cart-text {
+width: 516.57px;
+height: 81.54px;
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 32px;
+line-height: 39px;
+
+color: #A0A0A0;
+
+}
+.btn-Xcart {
+    background: #B8CAFA;
+    border-radius: 5px;
+    width: 265px;
+    height: 66px;
+}
+.price  {
+    
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #C2FF92;
+width: 109.73px;
+}
+.svgquantity {
+    transform: rotate(180deg);
+
+}
+.imgquantity {
+    margin-top: 50px;
+}
+.div-btn-geolocation {
+    display: flex;
+    align-items: flex-end;
+}
+.btn-geolocation {
+ width: 333px;
+height: 103.49px;
+background: #262323;
+border-radius: 10px;
+}
+.btn-geolocation-text {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #A0A0A0;
+
+}
