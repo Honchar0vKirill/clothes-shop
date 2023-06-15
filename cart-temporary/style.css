@@ -21,7 +21,8 @@
 .cart {
     display: flex;
     justify-content: space-around;
-    display: flex;}
+    
+}
 .cart-text {
 width: 516.57px;
 height: 81.54px;
@@ -51,9 +52,16 @@ line-height: 29px;
 color: #C2FF92;
 width: 109.73px;
 }
+/*.pricequantity {
+    display: flex;
+    align-items: center;
+    background-color: red;
+}*/
 .svgquantity {
     transform: rotate(180deg);
-
+}
+.svgquantity1 {
+    cursor: pointer;
 }
 .imgquantity {
     margin-top: 50px;
@@ -61,9 +69,14 @@ width: 109.73px;
 .div-btn-geolocation {
     display: flex;
     align-items: flex-end;
+    justify-content: space-between  ;
+    height: 60%;
+    padding-left: 3%;
 }
 .btn-geolocation {
- width: 333px;
+    border: none;
+    cursor: pointer;
+    width: 333px;
 height: 103.49px;
 background: #262323;
 border-radius: 10px;
@@ -76,5 +89,76 @@ font-size: 24px;
 line-height: 29px;
 
 color: #A0A0A0;
+
+}
+.block2 {
+    width: 41.41px;
+height: 40.77px;
+background: #D9D9D9;
+display: flex;
+justify-content: center;
+align-items: center;
+
+font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 29px;
+
+color: #000000;
+}
+.num {
+    display: flex;
+    justify-content: space-between  ;
+    align-items: center;
+}
+.pricenum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.img-cart {
+    display: flex;
+    align-items: center;
+}
+.Place-an-order {
+    margin-right: 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 420px;
+    height: 152.62px;
+    background: #262323;
+    border-radius: 10px;
+}
+.price-place-an-order {
+    width: 116px;
+    height: 35.54px;
+    padding-right: 5%;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+
+    color: #C2FF92;
+}
+.btn-Place-an-order {
+    cursor: pointer;
+    border: none;
+    width: 227px;
+    height: 86.77px;
+    background: #2E2B2B;
+    border-radius: 10px;
+
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 29px;
+    text-align: center;
+
+    color: #A0A0A0;
 
 }
