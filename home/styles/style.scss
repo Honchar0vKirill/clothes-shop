@@ -193,6 +193,7 @@ body {
             border: none;
             border-radius: 20px;
             margin-top: 11%;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
         }
         &_content{
             display: flex;
@@ -221,11 +222,26 @@ body {
     align-items: center;
     width: 1896px;
     height: 708.66px;
+    img{
+        width: 800px;
+        margin-top: 10%;
+        margin-left: 15%;
+    }
     &_list{
         display: flex;
         flex-direction: column;
         justify-content: space-around;
         width: 660px;
         height: 669px;
+        h1{
+        font-family: 'Raleway';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 44px;
+        line-height: 130%;
+        color: #FFFFFF;
+        margin-right: 30%;
+        margin-bottom: 60%;
+        }
     }
 }
