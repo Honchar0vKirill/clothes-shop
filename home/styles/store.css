@@ -141,4 +141,80 @@ body {
   opacity: 0;
   visibility: hidden;
   transition-duration: 0.5s;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 1862px;
+  height: 543px;
+}
+.hero-section h1 {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 58px;
+  color: #FFFFFF;
+}
+.hero-section p {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  text-align: center;
+  color: #A0A0A0;
+}
+.hero-section_slider {
+  margin-top: 5%;
+  width: 100%;
+}
+.hero-section_slider_btn {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background: #D9D9D9;
+  transform: rotate(-180deg);
+  border: none;
+  border-radius: 20px;
+  margin-top: 11%;
+}
+.hero-section_slider_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+.hero-section_slider_content_item {
+  width: 312px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(136.23deg, #D9D9D9 0%, rgba(242, 242, 242, 0) 97.94%);
+}
+
+#prevBtn {
+  margin-left: 90%;
+}
+
+#nextBtn {
+  margin-right: 90%;
+}
+
+.promo {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1896px;
+  height: 708.66px;
+}
+.promo_list {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 660px;
+  height: 669px;
 }/*# sourceMappingURL=store.css.map */

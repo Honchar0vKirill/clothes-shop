@@ -1,0 +1,18 @@
+@media (max-width: 830px) {
+  .header_instagram-img {
+    display: none;
+  }
+  .header_nav {
+    display: none;
+  }
+  .change-language hr {
+    display: none;
+  }
+  .change-language a {
+    display: none;
+  }
+  .header .burger-menu {
+    opacity: 1;
+    display: block;
+  }
+}/*# sourceMappingURL=media.css.map */
