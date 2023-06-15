@@ -150,6 +150,7 @@ body {
   align-items: center;
   width: 1862px;
   height: 543px;
+  margin-top: -40%;
 }
 .hero-section h1 {
   font-family: "Inter";
