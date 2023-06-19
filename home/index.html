@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/reset.css">
+    <link rel="stylesheet" href="./styles/store.css">
+    <link rel="stylesheet" href="./styles/media.css">
+    <title>Home</title>
+</head>
+<body>
+    
+    <div class="container">
+
+        <header class="header">
+
+            <img src="./img/HeaderLogo.svg" alt="logo" class="header_logo">
+
+            <nav class="header_nav">
+
+                <ul class="header_nav_ul">
+                    <li class="list_element active-list_element"><a href="#">Home</a></li>
+                    <li class="list_element"><a href="#">Store</a></li>
+                    <li class="list_element"><a href="#">Cart</a></li>
+                </ul>
+
+            </nav>
+
+            <img class="header_instagram-img" src="./img/HeaderInstagram.svg" alt="">
+
+            <div class="change-language">
+                <a href="#"  class="change-language_button">ENG</a>
+                <hr class="change-language_hr">
+                <a href="#" class="change-language_button change-language_active-button">UKR</a>
+            </div>
+
+            <div class="burger-menu">
+
+                <hr class="upper-hr">
+                <hr class="center-hr">
+                <hr class="bottom-hr">
+                
+            </div>
+            
+        </header>
+
+        <div class="opened-block displayNone">
+            <nav class="nav-menu">
+                <ul class="nav-menu_ul">
+                    <li class="nav-menu_ul_element"><a href="#">Home</a></li>
+                    <li class="nav-menu_ul_element"><a href="#">Store</a></li>
+                    <li class="nav-menu_ul_element"><a href="#">Cart</a></li>
+                </ul>
+            </nav>
+
+            <div class="menu_change-language_wrapper">
+                <div class="menu_change-language">
+                    <a href="#"  class="menu_change-language_button menu_change-language_active-button">ENG</a>
+                    <hr class="menu_change-language_hr">
+                    <a href="#" class="menu_change-language_button">UKR</a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="hero-section">
+            <h1>Our Latest Product</h1>
+            <p>Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
+            <div class="hero-section_slider">
+                <div class="hero-section_slider_content">
+                    <button class="hero-section_slider_btn" id="prevBtn"><img src="./img/icons/arrow-left.png"></button>
+                    <div class="hero-section_slider_content_item"><img src="./img/custom-pegasus.png" alt="custom pegasus"></div>
+                    <div class="hero-section_slider_content_item"><img src="./img/af1.png" alt="air forces"></div>
+                    <div class="hero-section_slider_content_item"><img src="./img/af1-high.png" alt="air forces high"></div>
+                    <div class="hero-section_slider_content_item"><img src="./img/air-max.png" alt="air max'es"></div>
+                    <div class="hero-section_slider_content_item"><img src="./img/blazer.png" alt="blazers"></div>
+                    <button class="hero-section_slider_btn" id="nextBtn"><img src="./img/icons/arrow-right.png"></button>
+                </div>
+            </div>
+        </div>
+        <div class="promo">
+            <img src="./img/atlete.png">
+            <div class="promo_list">
+                <h1>The best clothes for the best people.</h1>
+                
+            </div>
+        </div>
+
+        <footer>
+            <div class="footerMenu">
+                <div class="footer-logoContainer"> 
+                    <img class="footer-logo" src="./img/HeaderLogo.svg" alt="">
+                </div>
+                <div class="footer-menuP-link">
+                    <a href=""><p class="footer-menuP">Home</p></a>
+                    <a href=""><p class="footer-menuP">Store</p></a>
+                    <a href=""><p class="footer-menuP">Cart</p></a>
+                </div>
+                <div class="footerFollowUsBLock">
+                    <p class="followUs">Follow Us :
+                        <a href="https://uk-ua.facebook.com/"><img src="./img/facebook.svg" alt=""></a>
+                        <a href="https://twitter.com/?lang=ru"><img src="./img/twitter.svg" alt=""></a>
+                        <a href="https://www.instagram.com/"><img src="./img/Insta.svg" alt=""></a>
+                    </p>
+                </div>
+            </div>
+            <h1 class="contactsH1">Contacts</h1>
+            <div class="ContactsCotainer">
+                <div class="contactBlockOne">
+                    <div class="mail">
+                        <img class="mailImg" src="/home/img/mail.svg" alt="">
+                        <p class="mailP">Nikee@gmail.com</p>
+                    </div>
+                    <div class="gps">
+                        <img class="gpsImg" src="/home/img/gps.svg" alt="">
+                        <p class="gpsP">Київ -- бульвар Лесі Українки</p>
+                    </div>
+                </div>
+                <div class="contactBlockTwo">
+                    <div class="phoneNumber">
+                        <img class="phoneNumberImg" src="/home/img/phoneNumber.svg" alt="">
+                        <p class="phoneNumberP">+05011011011</p>
+                    </div>
+                    <div class="telegram">
+                        <img class="telegramImg" src="/home/img/telegram.svg" alt="">
+                        <p class="telegramP">NikeeGroup</p>
+                    </div>
+                </div>
+            </div>
+            <div class="paymentContainer">
+                <div class="VISAblock">
+                    <img src="./img/visa.svg" alt="">
+                </div>
+                <div class="masterCardblock">
+                    <img src="./img/masterCard.svg" alt="">
+                </div>
+                <div class="applePayblock">
+                    <img src="./img/applePay.svg" alt="">
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="./script/store.js"></script>
+
+
+</body>
+</html>
