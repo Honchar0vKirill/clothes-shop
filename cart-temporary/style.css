@@ -252,4 +252,32 @@ color: #000000;
        width: 90%;
        height: 30%;
    }
+   .btn-Xcart {
+    border: none;
+   }
+   .div-btn-geolocation {
+    margin-top: 10%;
+   }
+   .price {
+    margin-right: -20%;
+   }
+   .Place-an-order {
+    width: 40%;
+    height: 25%;
+   }
+   .price-place-an-order {
+    font-size: 18px;
+    margin-left: 5%;
+   }
+   .btn-Place-an-order {
+    width: 90%;
+    height: 90%;
+    font-size: 18px;
+   }
+   }
+   @media screen and (max-width: 425px) {
+    .div-cart-text{
+        display: flex;
+        justify-content: flex-start;
+    }
    }
