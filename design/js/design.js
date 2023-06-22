@@ -194,19 +194,37 @@ const reduceButton = document.querySelector('.str-m');
 const increaseButton = document.querySelector('.str-p');
 const numberDisplay = document.querySelector('.number-num');
 const priceDisplay = document.querySelector('.price-text');
+const endPriceDisplay = document.querySelector('.end-price');
 let quantity = 1;
 let price = 3500;
+let priceolso
 
 function updateDisplay() {
   numberDisplay.textContent = quantity;
   priceDisplay.textContent = `${price}грн`;
+  updateEndPrice();
 
-  // Зберегти значення в localStorage
+  // Save values to localStorage
   localStorage.setItem('quantity', quantity);
   localStorage.setItem('price', price);
 }
 
-// Перевірити, чи є збережені значення в localStorage
+
+
+
+
+
+
+
+
+
+
+
+function updateEndPrice() {
+  const endPrice = price * quantity;
+  endPriceDisplay.textContent = `${endPrice}грн`;
+}
+
 if (localStorage.getItem('quantity')) {
   quantity = parseInt(localStorage.getItem('quantity'));
 }
@@ -215,7 +233,6 @@ if (localStorage.getItem('price')) {
   price = parseInt(localStorage.getItem('price'));
 }
 
-// Обробники подій для стрілок
 reduceButton.addEventListener('click', function() {
   if (quantity > 1) {
     quantity--;
@@ -230,8 +247,19 @@ increaseButton.addEventListener('click', function() {
   updateDisplay();
 });
 
-// Оновити відображення при завантаженні сторінки
 updateDisplay();
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -290,5 +318,70 @@ inputs.forEach((input) => {
     localStorage.setItem(inputId, input.value);
   });
 });
+
+const endBtnTrue = document.querySelector('.end-btn-true');
+
+endBtnTrue.addEventListener('click', () => {
+  const formData = {
+    contactData: {
+      lastName: lastNameInput.value,
+      firstName: firstNameInput.value,
+      phone: phoneInput.value,
+      email: emailInput.value
+    },
+    quantity: quantity,
+    city: selectValue,
+    recipientData: {
+     
+    }
+  };
+  localStorage.setItem('orderData', JSON.stringify(formData));
+
+  const button = document.createElement('button');
+  button.style.width = '150px';
+  button.style.height = '40px';
+  button.style.backgroundColor = '#2E2727';
+  button.style.border = '#A0A0A0 1px solid';
+  button.style.borderRadius = '10px';
+  button.style.color = '#A0A0A0';
+  button.style.cursor = 'pointer';
+  button.style.marginLeft = '25%';
+  button.textContent = 'На головну';
+  document.body.appendChild(button);
+
+
+
+ 
+  
+  document.body.innerHTML = '';
+  document.body.style.backgroundColor = '#2E2727';
+
+  const thankYouText = document.createElement('h1');
+
+  document.body.style.height = '738px';
+  thankYouText.style.marginLeft = '25%';
+  thankYouText.style.color = 'white';
+  thankYouText.textContent = 'Дякуємо за замовлення';
+  
+  document.body.appendChild(thankYouText);
+});
+
+
+
+
+const endBtnFalse = document.querySelector('.end-btn-false');
+
+endBtnFalse.addEventListener('click', () => {
+  // Видаляємо дані з localStorage
+  localStorage.removeItem('orderData');
+});
+
+
+
+function clearLocalStorageAndRefresh() {
+  localStorage.clear();
+  location.reload();
+}
+
 
 

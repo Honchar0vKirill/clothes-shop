@@ -327,3 +327,192 @@ body {
 .products-nav_main-hr_underline {
     transition: transform 0.3s ease;
   }
+
+// Footer //
+footer {
+    width: 100%;
+    height: 545px;
+    background: #262020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .footerMenu{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } 
+  .footer-logoContainer{
+    display: flex;
+    justify-content: start;
+    width: 234px;
+  }
+  .footer-logo{
+    width: 160px;
+    height: 65px;
+  }
+  .footer-menuP-link{
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+  .footer-menuP{
+    font-family: Inter;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #A0A0A0;
+  }
+  .footerFollowUsBLock{
+    width: 250px;
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 22px;
+    line-height: 140%;
+  
+    text-align: center;
+  
+    color: #FFFFFF;
+  }
+  .followUs{
+    display: flex;
+    justify-content: space-around;
+  }
+  
+  
+  .contactsH1{
+    font-family: Raleway;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  
+  .ContactsCotainer{
+    width: 60%;
+    height: 140px;
+    display: flex;
+    flex-direction: column;
+    font-family: Raleway;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 36px;
+    letter-spacing: 0em;
+    text-align: center;  
+    color: #FFFFFF;
+  }
+  .contactBlockOne{
+    width: 100%;
+    height: 60px;
+    display: flex;
+  }
+  .contactBlockTwo{
+    width: 100%;
+    height: 60px;
+    display: flex;
+  }
+  .mail{
+    width: 50%;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .mailImg{
+    height: 45px;
+    width: 49px;
+  }
+  .mailP{
+    width: 300px;
+  }
+  .gps{
+    width: 50%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .gpsImg{
+    height: 45px;
+    width: 49px;
+  }
+  .gpsP{
+    width: 300px;
+  }
+  .phoneNumber{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .phoneNumberImg{
+    height: 45px;
+    width: 49px;
+  }
+  .phoneNumberP{
+    width: 300px;
+  }
+  .telegram{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .telegramImg{
+    height: 45px;
+    width: 49px;
+  }
+  .telegramP{
+    width: 300px;
+  }
+  
+  
+  .paymentContainer{
+    width: 40%;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .VISAblock{
+    height: 54px;
+    width: 130px;
+    box-sizing: border-box;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .masterCardblock{
+    height: 54px;
+    width: 130px;
+    box-sizing: border-box;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 8px;
+  }
+  .applePayblock{
+    height: 54px;
+    width: 130px;
+    box-sizing: border-box;
+    border: 0.5px solid #FFFFFF;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
