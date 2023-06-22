@@ -2,65 +2,117 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./design.css">
-    <title>Document</title>
+    <title>Home</title>
 </head>
 <body>
-    <div class="container">
-
-        <header class="header">
-
-            <img src="./img/HeaderLogo.svg" alt="logo" class="header_logo">
-
-            <nav class="header_nav">
-
-                <ul class="header_nav_ul">
-                    <li class="list_element active-list_element"><a href="#">Home</a></li>
-                    <li class="list_element"><a href="#">Store</a></li>
-                    <li class="list_element"><a href="#">Cart</a></li>
-                </ul>
-
-            </nav>
-
-            <img class="header_instagram-img" src="./img/HeaderInstagram.svg" alt="">
-
-            <div class="change-language">
-                <a href="#"  class="change-language_button">ENG</a>
-                <hr class="change-language_hr">
-                <a href="#" class="change-language_button change-language_active-button">UKR</a>
+    
+    <div class="conteiner">
+        <img class="logo" src="./img/logo.png" alt="">
+        <div class="my-info">
+            <div class="number-info">1</div>
+            <div class="more-info">
+                <h3 class="contact-text-h">Ваші контакні дані</h3>
+                <div class="inputs">
+                    <div class="input-1">
+                      <p class="input-text">Прізвище</p>
+                      <input class="input-class" type="text" id="lastNameInput">
+                      <p class="input-text">Мобільний телефон</p>
+                      <input class="input-class" type="tel" id="phoneInput">
+                    </div>
+                    <div class="input-2">
+                      <p class="input-text">Імя</p>
+                      <input class="input-class" type="name" id="firstNameInput">
+                      <p class="input-text">Електронна пошта</p>
+                      <input class="input-class" type="email" id="emailInput">
+                    </div>
+                  </div>
+                <button class="btn-no" id="rejectButton">Відхілити</button>
+                <button class="btn-yes" id="saveButton">Зберегти</button>
             </div>
-
-            <div class="burger-menu">
-
-                <hr class="upper-hr">
-                <hr class="center-hr">
-                <hr class="bottom-hr">
-                
-            </div>
-            
-        </header>
-
-        <div class="opened-block displayNone">
-            <nav class="nav-menu">
-                <ul class="nav-menu_ul">
-                    <li class="nav-menu_ul_element"><a href="#">Home</a></li>
-                    <li class="nav-menu_ul_element"><a href="#">Store</a></li>
-                    <li class="nav-menu_ul_element"><a href="#">Cart</a></li>
-                </ul>
-            </nav>
-
-            <div class="menu_change-language_wrapper">
-                <div class="menu_change-language">
-                    <a href="#"  class="menu_change-language_button menu_change-language_active-button">ENG</a>
-                    <hr class="menu_change-language_hr">
-                    <a href="#" class="menu_change-language_button">UKR</a>
-                </div>
-            </div>
-
         </div>
-
-        
+        <p class="order-text">Замовлення</p>
+        <div class="order">
+            <div class="name-order">
+                <div class="number-info">1</div>
+                <h1 class="name-text">Товари</h1>
+            </div>
+                <div class="goods">
+                    <div class="goods-info">
+                        <img class="kross-img" src="./img/kross.png" alt="">
+                        <p class="kross-text">КРОСІВКИ NIKE AIR FORCE 1 LOW ALL WHITE</p>
+                        <div class="number">
+                            <p class="price-text">3500грн</p>
+                            <div class="number-selection">
+                                <img class="str str-m " src="./img/screlka1.png" alt="">
+                                <p class="number-num">1</p>
+                                <img class="str str-p" src="./img/screlka2.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div class="name-order">
+                <div class="number-info">2</div>
+                <h1 class="name-text">Доставка</h1>
+            </div> 
+                <div class="posta">
+                    <div class="urkposhta">
+                        <input id="checkId1" class="chek-ukr" type="checkbox">
+                        <pre class="chek-text">Самовивіз з Укрпошти                         45$</pre>
+                        <div id="selectContainer1"></div>
+                    </div>
+                    <div class="urkposhta">
+                        <input id="checkId2" class="chek-ukr" type="checkbox">
+                        <pre class="chek-text">Самовивіз з Новапошта                       85$</pre>
+                        <div id="selectContainer2"></div>
+                    </div>   
+                                    
+                </div>  
+            <div class="name-order">
+                <div class="number-info">3</div>
+                <h1 class="name-text">Оплата</h1>
+            </div>              
+                <div class="pay">
+                    <div class="pay-select">
+                        <input id="paymentOption1" class="pay-chek" type="checkbox">
+                        <p class="pay-text">Оплата під час отримання</p>
+                      </div>
+                      <div class="pay-select">
+                        <input id="paymentOption2" class="pay-chek" type="checkbox">
+                        <p class="pay-text">Безготівковими для юридичних осіб</p>
+                      </div>
+                      <div class="pay-select">
+                        <input id="paymentOption3" class="pay-chek" type="checkbox">
+                        <p class="pay-text">Безготівковими для фізичних осіб</p>
+                      </div>
+                      
+                </div>
+            <div class="name-order">
+                <div class="number-info">4</div>
+                <h1 class="name-text">Контакні дані отримувача замовлення</h1>
+            </div>
+            <div>
+                <div class="inputs inputs-class">
+                    <div class="input-1">
+                      <p class="input-text">Прізвище</p>
+                      <input class="input-class" type="text" id="lastNameInput">
+                      <p class="input-text">По батьков</p>
+                      <input class="input-class" type="tel" id="phoneInput">
+                    </div>
+                    <div class="input-2">
+                      <p class="input-text">Імя</p>
+                      <input class="input-class" type="name" id="firstNameInput">
+                      <p class="input-text">Електронна пошта</p>
+                      <input class="input-class" type="email" id="emailInput">
+                    </div>
+                  </div>                  
+            </div>
+            <div></div>
+            <div></div>
+        </div>
     </div>
+    <script src="./js/design.js"></script>
 </body>
 </html>
