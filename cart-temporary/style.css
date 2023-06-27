@@ -107,9 +107,9 @@ line-height: 29px;
 
 color: #000000;
 }
-.num {
+.div-number-num {
     display: flex;
-    justify-content: space-between  ;
+    /*justify-content: space-between  ;*/
     align-items: center;
 }
 .pricenum {
@@ -211,15 +211,16 @@ color: #000000;
 }
 @media screen and (max-width: 768px)  {
     .img-cart {
-      width: 25%;
+      width: 35%;
     }
     .svgquantity1 {
-       width: 80%;
+       width: 100px;
     }
     .block2 {
-       width: 40%;
-       height: 15%;
-       font-size: 16px;
+        width: 30px;
+    }
+    .div-number-num {
+        margin-left: -100%;
     }
     .btn-Xcart {
        width: 50%;
@@ -227,13 +228,14 @@ color: #000000;
     }
     .cart-text {
         width: 80%;
-       font-size: 16px;
+       font-size: 24px;
     }
    .price {
        margin-top: 0%;
        display: flex;
        font-size: 20px;
     }
+
     .btn-geolocation {
        width: 100%;
        height: 40%;
@@ -258,9 +260,7 @@ color: #000000;
    .div-btn-geolocation {
     margin-top: 10%;
    }
-   .price {
-    margin-right: -20%;
-   }
+
    .Place-an-order {
     width: 40%;
     height: 25%;
@@ -310,5 +310,10 @@ color: #000000;
         width: 90%;
         margin-left: 5%;
         margin-top: 23%;
+    }
+   }
+   @media screen and (max-width: 320px) {
+    .block2  {
+        width: 10%;
     }
    }
