@@ -276,8 +276,39 @@ color: #000000;
    }
    }
    @media screen and (max-width: 425px) {
-    .div-cart-text{
-        display: flex;
-        justify-content: flex-start;
+    .div-btn-geolocation {
+        display: none;
+    }
+    .svg {
+        margin-top: 3%;
+        width: 97%;
+    }
+    .img-cart {
+        width: 45%;
+    }
+    .cart-text {
+        
+        font-size: 12px;
+    }
+    .svgquantity1{
+        width:60px;
+    }
+    .block2 {
+        width: 30px;
+    }
+    .num {
+
+        margin-left: -15%;
+    }
+    .price {
+        margin-right: 100%;
+    }
+    .btn-Xcart {
+        width: 100%;
+    }
+    .Place-an-order {
+        width: 90%;
+        margin-left: 5%;
+        margin-top: 23%;
     }
    }
