@@ -1,0 +1,166 @@
+body{
+  width: 90%;
+  height: 860px;
+  display: flex;
+  flex-direction: column;
+}
+header{
+  width: 100%;
+  height: 100px;
+}
+
+.header {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-between ;
+  align-items: center;
+}
+.CongratulationsBlock{
+  width: 720px;
+  height: 112px;
+  color: #CA9292;
+  font-size: 70px;
+  font-family: Kadwa;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.header .change-language {
+  display: flex;
+  align-items: center;
+}
+.header .change-language_hr {
+  height: 50px;
+  margin: 0px 20px;
+}
+.header .change-language_button {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.header .change-language_active-button {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+.header .burger-menu {
+  display: none;
+  opacity: 0;
+}
+
+
+main{
+  width: 90%;
+  height: 700px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.abcBlockText{
+  width: 48%;
+  height: 500px;
+  color: #9D7373;
+  font-size: 43px;
+  font-family: Kadwa;
+  line-height: 70px;
+}
+.abcImg{
+  width: 40%;
+}
+.abcNikeImg{
+  width: 550px;
+  height: 700px;
+  padding-top: 160px;
+  padding-left: 100px;
+}
+.buttonBlockABC{
+  width: 300px;
+  height: 50px;
+  color: #DCCCCC;
+  font-size: 30px;
+  font-family: Kadwa;
+  background: none;
+}
+
+
+
+
+.modal {
+  display: none; /* Hide the modal by default */
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+}
+
+.modal-content {
+  background-color: none;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 60%;
+}
+
+.close {
+  color: #888;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.PleaseBlock{
+  height: 70px;
+  font-size: 25px;
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+.registerBlock{
+  width: 100%;
+  height: 200px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.NameAbc{
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+}
+.phoneNumberAbc{
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  margin-top: 30px;
+}
+.MailAbc{
+  font-size: 20px;
+  width: 300px;
+  height: 40px;
+  border-radius: 7px;
+  margin-top: 30px;
+}
+.saveButton{
+  width: 150px;
+  height: 30px;
+  margin-top: 30px;
+  font-size: 15px;
+  color: white;
+  background: none;
+}

@@ -249,6 +249,8 @@ footer {
 .footer-logo{
   width: 160px;
   height: 65px;
+  margin-top: 10px;
+  margin-left: 40px;
 }
 .footer-menuP-link{
   width: 300px;
@@ -410,4 +412,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.AlertBlock{
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: end;
+
+}
+.Alert{
+  font-size: 23px;
+  color: #7B4747;
 }
