@@ -250,6 +250,8 @@ footer {
 .footer-logo{
   width: 160px;
   height: 65px;
+  margin-top: 10px;
+  margin-left: 40px;
 }
 .footer-menuP-link{
   width: 300px;
@@ -412,6 +414,7 @@ footer {
   justify-content: center;
   align-items: center;
 }
+<<<<<<< HEAD
 .promo{
   display: flex;
   flex-direction: row;
@@ -493,4 +496,17 @@ li p {
 }
 li img{
   width: 90px !important;
+=======
+
+.AlertBlock{
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: end;
+
+}
+.Alert{
+  font-size: 23px;
+  color: #7B4747;
+>>>>>>> f56894afca5d258515abdcc900e9f47b2f0c91a8
 }
