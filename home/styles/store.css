@@ -226,13 +226,14 @@ body {
 /* footer */
 
 footer {
-  width: 100%;
+  width: 125%;
   height: 545px;
   background: #262020;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  margin-top: 10%;
 }
 .footerMenu{
   width: 100%;
@@ -249,6 +250,8 @@ footer {
 .footer-logo{
   width: 160px;
   height: 65px;
+  margin-top: 10px;
+  margin-left: 40px;
 }
 .footer-menuP-link{
   width: 300px;
@@ -410,4 +413,100 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+<<<<<<< HEAD
+.promo{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 1896px;
+  height: 708.66px;
+}
+.promo img{
+      width: 800px;
+      margin-top: 10%;
+      margin-left: 12%;
+  }
+.promo_container{
+  width: 641px;
+  height: 148px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin-top: 10%;
+}
+.promo_list{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      width: 660px;
+      height: 669px;
+      margin-left: -40%;
+      margin-top: 10%;
+}
+.promo_list_item{
+  width: 660px;
+  height: 104px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.promo_list_item p {
+  width: 541px;
+  height: 104px;
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #A0A0A0;
+}
+.promo_list_item img{
+  width: 90px !important;
+  margin-bottom: 10%;
+  margin-right: 5%;
+}
+.promo_container h1{
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 44px;
+  line-height: 130%;
+  color: #FFFFFF;
+  margin-left: -31%;
+  width: 641px;
+}
+li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 660px;
+    height: 104px;
+  }
+li p {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 150%;
+  color: #A0A0A0;  
+}
+li img{
+  width: 90px !important;
+=======
+
+.AlertBlock{
+  width: 90%;
+  height: 30px;
+  display: flex;
+  justify-content: end;
+
+}
+.Alert{
+  font-size: 23px;
+  color: #7B4747;
+>>>>>>> f56894afca5d258515abdcc900e9f47b2f0c91a8
 }
