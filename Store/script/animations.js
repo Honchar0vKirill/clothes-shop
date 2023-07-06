@@ -101,32 +101,3 @@ ulElement.addEventListener('click', (index) => {
 ulUnderline.style.transition = 'transform 0.3s ease'
 
 changeUnderlinePosition() 
-
-// Slider for pagiation //
-
-// Take elements from HTML //
-const paginationElementRight = document.querySelector('.pagination_element_right')
-const paginationElementLeft = document.querySelector('.pagination_element_left')
-let paginationElementText = document.querySelectorAll('.pagination_element_text')
-
-
-// Change numbers of pagination elements //
-const paginationElementNext = () => {
-    paginationElementText.forEach(element => {
-        let parsedElement = parseInt(element.innerHTML)
-        element.innerHTML = `${parsedElement + 5}`
-    })
-}
-
-const paginationElementPrevious = () => {
-    paginationElementText.forEach(element => {
-        let parsedElement = parseInt(element.innerHTML)
-        if (parsedElement - 5 > 0) {
-            element.innerHTML = `${parsedElement - 5}`
-        }
-    })
-}
-
-
-paginationElementLeft.addEventListener('click', paginationElementPrevious)
-paginationElementRight.addEventListener('click', paginationElementNext)

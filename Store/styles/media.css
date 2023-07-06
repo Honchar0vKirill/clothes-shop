@@ -203,9 +203,17 @@
     width: 40px;
     height: 40px;
   }
+  .main .pagination .pagination-numbers {
+    width: 40px;
+    height: 40px;
+  }
 }
 @media (max-width: 400px) {
   .main .pagination_element {
+    width: 30px;
+    height: 30px;
+  }
+  .main .pagination .pagination-numbers {
     width: 30px;
     height: 30px;
   }
@@ -215,9 +223,17 @@
     width: 60px;
     height: 60px;
   }
+  .main .pagination-numbers {
+    width: 60px;
+    height: 60px;
+  }
 }
 @media (min-width: 3000px) {
   .main .pagination_element {
+    width: 70px;
+    height: 70px;
+  }
+  .main .pagination .pagination-numbers {
     width: 70px;
     height: 70px;
   }
@@ -233,5 +249,12 @@
   .main .pagination_element img {
     width: 30px;
     height: 30px;
+  }
+  .main .pagination .pagination-numbers {
+    width: 100px;
+    height: 100px;
+  }
+  .main .pagination .pagination-numbers li {
+    font-size: 30px;
   }
 }/*# sourceMappingURL=media.css.map */
