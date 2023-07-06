@@ -1,0 +1,118 @@
+@media (min-width: 425px) and (max-width: 800px) {
+    .body{
+        width: 90%;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+    }
+    .header-phone {
+        width: 100%;
+        height: 60px;
+        display: flex;
+        justify-content: space-between ;
+        align-items: center;
+    }
+    .CongratulationsBlock-phone{
+        width: 180px;
+        height: 112px;
+        color: #CA9292;
+        font-size: 24px;
+        font-family: Kadwa;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+    .header_logo-phone{
+        width: 70px;
+    }
+    .change-language-phone{
+        display: flex;
+        align-items: center;
+        width: 80px;
+    }
+    .change-language_button-phone{
+        width: 80px;
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        font-size: 12px;
+        color: #FFFFFF;
+    }
+    .change-language_hr-phone{
+        width: 1px;
+        height: 30px;
+        margin: 0px 10px;
+    }
+    
+    .main-phone{
+        width: 90%;
+        height: 700px;
+        display: flex;
+        justify-content: space-around;
+        align-items: start;
+    }
+    .mainContainer-phone{
+        width: 90%;
+        height: 500px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .abcBlockText-phone{
+        width: 60%;
+        height: 430px;
+        color: #9D7373;
+        font-size: 18px;
+        font-family: Kadwa;
+        line-height: 20px;
+    }
+    .abcImg-phone{
+        width: 40%;
+        height: 400px;
+
+    }
+    .abcNikeImg-phone{
+        width: 170px;
+        height: 230px;
+        padding-top: 0px;
+        padding-left: 10px;
+    }
+    .buttonBlockABC-phone{
+        width: 150px;
+        height: 30px;
+        color: #DCCCCC;
+        font-size: 14px;
+        font-family: Kadwa;
+        background: none;
+        position: absolute;
+        top: 400px;
+        right: 200px;
+    }
+
+
+
+    .PleaseBlock-phone{
+        height: 70px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        color: white;
+    }
+    .NameAbc-phone{
+        font-size: 20px;
+        width: 230px;
+        height: 40px;
+        border-radius: 7px;
+    }
+    .phoneNumberAbc-phone{
+        font-size: 20px;
+        width: 230px;
+        height: 40px;
+        border-radius: 7px; 
+    }
+    .MailAbc-phone{
+        font-size: 20px;
+        width: 230px;
+        height: 40px;
+        border-radius: 7px; 
+    }
+}

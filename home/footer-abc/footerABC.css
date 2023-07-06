@@ -31,22 +31,15 @@ header{
   display: flex;
   align-items: center;
 }
-.header .change-language_hr {
+.change-language_hr {
   height: 50px;
   margin: 0px 20px;
 }
-.header .change-language_button {
+.change-language_button {
   font-family: "Inter", sans-serif;
   font-weight: 400;
   font-size: 20px;
   color: #FFFFFF;
-}
-.header .change-language_active-button {
-  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
-}
-.header .burger-menu {
-  display: none;
-  opacity: 0;
 }
 
 
@@ -57,21 +50,30 @@ main{
   justify-content: space-around;
   align-items: center;
 }
+.mainContainer{
+  width: 90%;
+  height: 400px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 .abcBlockText{
-  width: 48%;
+  width: 55%;
   height: 500px;
   color: #9D7373;
   font-size: 43px;
   font-family: Kadwa;
   line-height: 70px;
 }
+
 .abcImg{
   width: 40%;
+  height: 700px;
 }
 .abcNikeImg{
   width: 550px;
   height: 700px;
-  padding-top: 160px;
+  padding-top: 70px;
   padding-left: 100px;
 }
 .buttonBlockABC{
@@ -81,6 +83,8 @@ main{
   font-size: 30px;
   font-family: Kadwa;
   background: none;
+  margin-left: 90px;
+  position: relative;
 }
 
 
