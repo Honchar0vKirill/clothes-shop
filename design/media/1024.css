@@ -1,0 +1,11 @@
+@media (max-width: 1024px) and (min-width: 769px) {
+    .number{
+        margin-left: -70px;
+    }
+    .logo{
+        margin-left: 23%;
+    }
+    .goods-info{
+        margin-left:-20px;
+    }
+}

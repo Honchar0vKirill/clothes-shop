@@ -222,7 +222,7 @@ function updateDisplay() {
 
 function updateEndPrice() {
   const endPrice = price * quantity;
-  endPriceDisplay.textContent = `${endPrice}грн`;
+  endPriceDisplay.textContent = `${price}грн`;
 }
 
 if (localStorage.getItem('quantity')) {
@@ -337,18 +337,20 @@ endBtnTrue.addEventListener('click', () => {
   };
   localStorage.setItem('orderData', JSON.stringify(formData));
 
-  const button = document.createElement('button');
-  button.style.width = '150px';
-  button.style.height = '40px';
-  button.style.backgroundColor = '#2E2727';
-  button.style.border = '#A0A0A0 1px solid';
-  button.style.borderRadius = '10px';
-  button.style.color = '#A0A0A0';
-  button.style.cursor = 'pointer';
-  button.style.marginLeft = '25%';
-  button.textContent = 'На головну';
-  document.body.appendChild(button);
+  const buttonHTML = `
+          <button style="width: 150px;
+                        height: 40px;
+                        background-color: #2E2727;
+                        border: #A0A0A0 1px solid;
+                        border-radius: 10px;
+                        color: #A0A0A0;
+                        cursor: pointer;
+                        margin-left: 25%;">
+            На головну
+          </button>
+        `;
 
+    document.body.innerHTML += buttonHTML;
 
 
  

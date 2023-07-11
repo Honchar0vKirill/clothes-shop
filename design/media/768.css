@@ -1,0 +1,20 @@
+@media (max-width: 768px) and (min-width: 426px) {
+    .goods{
+        margin-left: -50px;
+    }
+    .logo{
+        margin-left: 17%;
+    }
+    .container{
+        margin-left: -500px;
+    }
+    .kross-text{
+        width: 310px;
+        font-weight: 400;
+        font-size: 25px;
+        line-height: 39px;
+    }
+    .number{
+        margin-left: -20px;
+    }
+}
