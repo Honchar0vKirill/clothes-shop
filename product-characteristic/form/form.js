@@ -32,6 +32,6 @@ form.btnClean.addEventListener('click', () => {
 console.log(window.location)
 const btnBack = document.querySelector('.btnBack')
 btnBack.addEventListener('click', () => {
-    window.location.href = "http://127.0.0.1:5503/index.html"
+    window.location.href = "http://127.0.0.1:5501/product-characteristic/index.html"
     console.log('click')
 })
