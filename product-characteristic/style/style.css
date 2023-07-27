@@ -1,0 +1,405 @@
+body{
+    background: #2E2727;
+}
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital@1&family=Poppins&family=Raleway:wght@400;500;600;700&family=Roboto+Condensed:ital,wght@1,300&family=Rubik:wght@400;500;600;700&display=swap");
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  height: 132px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+.header_nav {
+  margin-left: -20px;
+}
+.header_nav_ul {
+  width: 100%;
+  display: flex;
+}
+.header_nav_ul .list_element {
+  margin-left: 30px;
+}
+.header_nav_ul .list_element a {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  transition-duration: 1s;
+}
+.header_nav_ul .list_element a:hover {
+  transition-duration: 1s;
+  color: white;
+}
+.header_nav_ul .active-list_element a {
+  color: #FFFFFF;
+  text-shadow: 0px 0px 10px #FFFFFF;
+}
+.header .change-language {
+  display: flex;
+  align-items: center;
+}
+.header .change-language_hr {
+  height: 50px;
+  margin: 0px 20px;
+}
+.header .change-language_button {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #FFFFFF;
+}
+.header .change-language_active-button {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+}
+.header .burger-menu {
+  display: none;
+  opacity: 0;
+}
+.header .burger-menu hr {
+  width: 30px;
+}
+
+.burger-menu_animationTurnOn {
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOn .upper-hr {
+  transform: rotate(-45deg) translateY(6px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOn .center-hr {
+  transform: rotate(45deg) translateY(-6px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOn .bottom-hr {
+  opacity: 0;
+  transition-duration: 1s;
+}
+
+.burger-menu_animationTurnOf {
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOf .upper-hr {
+  transform: rotate(0deg) translateY(0px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOf .center-hr {
+  transform: rotate(0deg) translateY(0px);
+  transition-duration: 1s;
+}
+.burger-menu_animationTurnOf .bottom-hr {
+  opacity: 1;
+  transition-duration: 1s;
+}
+
+.opened-block {
+  background: #262020;
+  width: 100vw;
+  height: 500px;
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  z-index: 20;
+  top: 132px;
+}
+.opened-block .nav-menu {
+  width: 100%;
+}
+.opened-block .nav-menu_ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+.opened-block .menu_change-language_wrapper {
+  height: 50%;
+  width: 100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.opened-block .menu_change-language_wrapper .menu_change-language {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.opened-block .menu_change-language_wrapper .menu_change-language_hr {
+  height: 50px;
+}
+.opened-block .menu_change-language_wrapper .menu_change-language_active-button {
+  color: #FFFFFF;
+  text-shadow: 0px 0px 10px #FFFFFF;
+}
+
+.displayBlock {
+  opacity: 1;
+  visibility: visible;
+  transition-duration: 0.5s;
+}
+
+.displayNone {
+  opacity: 0;
+  visibility: hidden;
+  transition-duration: 0.5s;
+}
+
+.btns{
+    margin-top: -100px;
+    display: flex;
+    column-gap: 160px;
+    justify-content: center;
+}
+.btnCliderPrev{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.btnCliderNext{
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+
+/* styles for the first ProductBlock */
+
+
+.ProductBlock{
+    display: flex;
+    align-items: center;
+    column-gap: 80px;
+}
+.sliderImg{
+    width: 500px;
+    height: 500px;
+}
+.itemBlock{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.name{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    color: #A0A0A0;
+}
+.price{
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44px;
+    color: #C2FF92;
+}
+.chose{
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 612px;
+      height: 73px;  
+      background: linear-gradient(90.19deg, #937B7B 37.89%, #DFCBBF 106.92%);
+      border-radius: 10px;
+      border: none;
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 400;
+      font-size: 32px;
+      line-height: 39px;
+      text-align: center;
+      
+      color: #000000;
+}
+.menu{
+  display: flex;
+  justify-content: space-around;
+}
+.text{
+  display: none;
+  width: 80%;
+  margin: 20px 10%;
+}
+.TextItem{
+
+  font-family: Inter;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: white;
+}
+.size{
+  cursor: pointer;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 39px;
+
+}
+.chose:focus+.text{
+  display: block;
+  color: white;
+}
+.btnAdd{
+  margin-top: 20px;
+  cursor: pointer;
+  width: 455px;
+  height: 85px;
+  background: #DFCBBF;
+  border: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 39px;
+  text-align: center;
+  border-radius: 5px;
+  color: #000000;
+}
+.btnBlockAdd{
+  display: flex;
+  justify-content: center;
+}
+
+/* styles for the second productBlock */
+
+
+.productBlock2{
+  display: flex;
+  justify-content: space-between;
+  column-gap: 230px;
+}
+.acordion{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 55px;
+}
+.description{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+  border: none;
+  width: 640px;
+  height: 64px;
+  background: #262020;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 30px;
+  line-height: 39px;
+  color: white;
+}
+.description:focus+.item{
+  display: block;
+}
+.item{
+  display: none;
+  padding: 15px 10px;
+  width: 600px;
+}
+.itemText{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 39px;
+  color: white;
+}
+.Blockreviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+#reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+.title{
+  text-align: center;
+  font-size: 32px;
+  font-family: Raleway;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  color: white;
+}
+.btnWrite{
+  cursor: pointer;
+  width: 300px;
+  height: 64px;
+  border: none;
+  background: #FAD3A5;
+  text-align: center;
+  font-family: 'Raleway';
+  font-style: bold;
+  font-weight: 300;
+  font-size: 24px;
+}
+.UserBlock1{
+  width: 470px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0px 0px 5px 0px #FFF;
+  border-radius: 2px;
+}
+.UserBlock2{
+  width: 470px;
+  height: 110px;
+  background: rgba(255, 255, 255, 0.27);
+  box-shadow: 0px 0px 5px 0px #FFF;
+  border-radius: 2px;
+}
+.UserName{
+  margin-left: 15px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 39px;
+  color: white;
+}
+.UserText{
+  margin-left: 15px;
+  width: 410px;
+  height: 18px;
+  font-family: Inter;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: white;
+}
+.profile{
+  position: absolute;
+  margin-left: -95px;
+  margin-top: 15px;
+}
+
+.hr{
+  border: none;
+  margin-left: 1px;
+  width: 250px;
+  height: 1px;
+  background: #b5a8a8;
+}

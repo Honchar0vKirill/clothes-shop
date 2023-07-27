@@ -1,0 +1,156 @@
+@media (max-width: 830px) {
+  .header_instagram-img {
+    display: none;
+  }
+  .header_nav {
+    display: none;
+  }
+  .change-language hr {
+    display: none;
+  }
+  .change-language a {
+    display: none;
+  }
+  .header .burger-menu {
+    opacity: 1;
+    display: block;
+  }
+}
+@media (min-width: 3000px) {
+  .header_nav_ul .list_element a {
+    font-weight: 600;
+    font-size: 34px;
+  }
+  .header_instagram-img {
+    width: 88px;
+    height: 88px;
+  }
+  .header .change-language a {
+    font-size: 34px;
+  }
+}
+
+
+@media (max-width: 830px) {
+  .ProductBlock{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .sliderImg{
+    width: 250px;
+    height: 250px;
+  }
+  .btns{
+    margin-top: -60px;
+    column-gap: 20px;
+  }
+  .itemBlock{
+    display: flex;
+    align-items: center;
+  }
+  .name{
+    width: 280px;
+    font-size: 16px;
+  }
+  .price{
+    font-size: 16px;
+    width: 100%;
+  }
+  .btnBlockAdd{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 0px;
+  }
+  .btnAdd{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 136px;
+    height: 29px;
+    font-size: 12px;
+  }
+  .text{
+    width: 60%;
+    margin: 15px 5%;
+  }
+  .size{
+    font-size: 10px;
+  }
+  .chose{
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+  }
+  .TextItem{
+    font-size: 10px;
+  }
+  .arrow{
+    width: 50px;
+    height: 50px;
+  }
+  .productBlock2{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .description{
+    border-radius: 5px;
+    width: 239px;
+    height: 28px;
+  }
+  .acordion{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .item{
+    width: 200px;
+    font-size: 5px;
+    line-height: 29px;
+  }
+  .title{
+    font-size: 20px;
+  }
+  .btnWrite{
+    width: 136px;
+    height: 28px;
+    font-size: 10px;
+  }
+  .Blockreviews{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 25px;
+  }
+  .UserBlock1{
+    width: 178px;
+    height: 121px;
+  }
+  .UserBlock2{
+    width: 178px;
+    height: 121px;
+  }
+  .profile{
+    width: 44px;
+    margin-left: -60px;
+    margin-top: 8px;
+  }
+  .UserName{
+    font-size: 11px;
+  }
+  .UserText{
+    width: 153px;
+    line-height: 19px;
+    margin-top: 5px;
+    font-size: 11px;
+  }
+}
+@media (min-width: 768px) {
+  .productBlock2{
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+}
+

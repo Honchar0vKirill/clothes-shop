@@ -1,0 +1,134 @@
+body{
+    background: #483F3F;
+}
+.container {
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.NameInput{
+    width: 582px;
+    height: 56px;
+    border: 1px solid white;
+    background: none;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+}
+.emailInput{
+    width: 582px;
+    height: 56px;
+    border: 1px solid white;
+    background: none;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+}
+.reviewsInput{
+    width: 582px;
+    height: 139px;
+    border: 1px solid white;
+    background: none;
+    border-radius: 5px;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    color: white;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+}
+p{
+    color: #FFF;
+    font-family: Inter;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.Title{
+    margin: 25px 0px;
+    text-align: center;
+    font-family: Inter;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.btns{
+    display: flex;
+    margin-top: 80px;
+    column-gap: 70px;
+}
+.btnRemove{
+    display: flex;
+    align-items: center;
+    column-gap: 20px;
+    cursor: pointer;
+    width: 188px;
+    height: 41px;
+    border-radius: 3px;
+    background: #FFCACA;
+    border: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.btnConfirm{
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+    cursor: pointer;
+    width: 188px;
+    height: 41px;
+    border-radius: 3px;
+    background: #DCFFC0;
+    border: none;
+    color: #000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.btnBack{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    width: 51px;
+    height: 51px;
+    border: 1px solid white;
+    border-radius: 13px;
+    background: none;
+}
+.blockBack{
+    margin: 20px 0px;
+    display: flex;
+    column-gap: 15px;
+}
+.text{
+    width: 105px;
+    height: 44px;
+    font-family: Inter;
+    font-size: 13px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
