@@ -22,7 +22,7 @@ const renderProducts = () => {
             btns.forEach(btnEl => {
                 const btnId = btnEl.getAttribute('element-id')
                 
-                
+                window.location.href = `http://127.0.0.1:5501/product-characteristic/index.html#${btnId}`
 
             })
         })
