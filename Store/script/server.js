@@ -6,7 +6,7 @@ const renderProducts = () => {
     body.innerHTML = ""
     products.forEach(productItem => { 
         body.innerHTML += `
-        <div class="content-block">
+        <div element-id="${productItem.id}" class="content-block">
             <img class="content-block_img" src="${productItem.imgUrl}" alt="">
             <p class="content-block_text">${productItem.name}</p>
             <p class="content-block_text sum">${productItem.price}</p>
@@ -17,14 +17,10 @@ const renderProducts = () => {
     const btns = document.querySelectorAll('.content-block_button')
     const blocks = document.querySelectorAll('.content-block')
 
-    blocks.forEach(block => {
-        block.addEventListener('click', () => {
-            btns.forEach(btnEl => {
-                const btnId = btnEl.getAttribute('element-id')
-                
-                window.location.href = `http://127.0.0.1:5501/product-characteristic/index.html#${btnId}`
-
-            })
+    blocks.forEach(blockItem => {
+        blockItem.addEventListener('click', () => {
+            const productId = blockItem.getAttribute('element-id')
+            window.location.href = `http://127.0.0.1:5501/product-characteristic/index.html#${productId}`
         })
     })
 }
