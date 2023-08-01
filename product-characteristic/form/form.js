@@ -2,7 +2,8 @@ const form = {
     name: document.querySelector('input[form-name]'),
     email: document.querySelector('input[form-email]'),
     reviews: document.querySelector('input[form-reviews]'),
-    btnClean: document.querySelector('button[form-btn]')
+    btnClean: document.querySelector('button[form-btn]'),
+    btnSubmit: document.querySelector('.btnConfirm')
 }
 
 let dataForm 
@@ -35,3 +36,17 @@ btnBack.addEventListener('click', () => {
     window.location.href = "http://127.0.0.1:5501/product-characteristic/index.html"
     console.log('click')
 })
+
+const productId = window.location.hash.substring(1)
+const baseUrl = 'http://localhost:4000/reviews'
+
+let reviewsArr = []
+
+const createReview = () => {
+    axios.post(`${baseUrl}/create?id=${productId}`)
+        .then(res => {
+            
+        })
+}
+
+form.btnSubmit.addEventListener('click', createReview)
