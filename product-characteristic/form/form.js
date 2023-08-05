@@ -5,6 +5,8 @@ const form = {
     btnClean: document.querySelector('button[form-btn]'),
     btnSubmit: document.querySelector('.btnConfirm')
 }
+const productId = window.location.hash.substring(1)
+const baseUrl = 'http://localhost:4000/reviews'
 
 let dataForm 
 if (localStorage.getItem('form')){
@@ -33,20 +35,20 @@ form.btnClean.addEventListener('click', () => {
 console.log(window.location)
 const btnBack = document.querySelector('.btnBack')
 btnBack.addEventListener('click', () => {
-    window.location.href = "http://127.0.0.1:5501/product-characteristic/index.html"
+    window.location.href = `http://127.0.0.1:5501/product-characteristic/index.html#${productId}`
     console.log('click')
 })
 
-const productId = window.location.hash.substring(1)
-const baseUrl = 'http://localhost:4000/reviews'
 
-let reviewsArr = []
-
-const createReview = () => {
-    axios.post(`${baseUrl}/create?id=${productId}`)
-        .then(res => {
-            
+form.btnSubmit.addEventListener('click', () => {
+    const dataForm = {
+        name: form.name.value,
+        email: form.email.value,
+        text: form.reviews.value,
+        idProduct: productId
+    }
+    axios.post(`${baseUrl}/create`, dataForm)
+        .then((res) => {
+            console.log(res.data)
         })
-}
-
-form.btnSubmit.addEventListener('click', createReview)
+})

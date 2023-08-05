@@ -65,3 +65,34 @@ const btn = document.querySelector('#btn')
 btn.addEventListener('click', () => {
     window.location.href = "./form/form.html"
 })
+
+const productId = window.location.hash.substring(1)
+
+let getReviewList
+let reviews = []
+const renderReviewList = () => {
+    reviewsEl.innerHTML = ""
+    reviews.forEach((review) => {
+        reviewsEl.innerHTML += `
+        <div class="UserBlock2">
+            <img class="profile" src="./profile-default-svgrepo-com 1.svg">
+            <p class="UserName">${review.name}</p>
+        <p class="UserText">${review.text}</p>
+        </div>
+        `
+    })
+    
+}
+
+const getReviewsList = () => {
+    axios.get(`http://localhost:4000/reviews/list?idProduct=${productId}`)
+        .then((res) => {
+            reviews = [
+                ...res.data
+            ]
+            getReviewList = res.data
+            renderReviewList()
+        })
+}
+
+getReviewsList()
