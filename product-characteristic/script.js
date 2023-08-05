@@ -1,3 +1,4 @@
+const productId = window.location.hash.substring(1)
 const reviewStore = [
     {
         id:1,
@@ -63,10 +64,11 @@ sliderBtns.prev.addEventListener('click', () => {
 console.log(window.location)
 const btn = document.querySelector('#btn')
 btn.addEventListener('click', () => {
-    window.location.href = "./form/form.html"
+    window.location.href = `http://127.0.0.1:5501/product-characteristic/form/form.html#${productId}`
+    console.log(productId)
 })
 
-const productId = window.location.hash.substring(1)
+
 
 let getReviewList
 let reviews = []
