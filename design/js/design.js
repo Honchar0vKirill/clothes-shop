@@ -102,11 +102,6 @@ if (checkbox2State === 'checked') {
   select2.innerHTML = null;
 }
 
-// Відновлюємо значення select
-if (selectValue) {
-  const select = checkbox1.checked ? document.getElementById('select1') : document.getElementById('select2');
-  select.value = selectValue;
-}
 
 checkbox1.addEventListener('change', (e) => {
   if (e.target.checked) {
