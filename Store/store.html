@@ -20,9 +20,9 @@
             <nav class="header_nav">
 
                 <ul class="header_nav_ul">
-                    <li class="list_element"><a href="#">Home</a></li>
+                    <li class="list_element"><a href="/home/index.html">Home</a></li>
                     <li class="list_element active-list_element"><a href="#">Store</a></li>
-                    <li class="list_element"><a href="#">Cart</a></li>
+                    <li class="list_element"><a href="/cart-temporary/index.html">Cart</a></li>
                 </ul>
 
             </nav>
@@ -44,6 +44,8 @@
             </div>
             
         </header>
+
+        <div class="addProducts"></div>
 
         <div class="opened-block displayNone">
             <nav class="nav-menu">
@@ -120,81 +122,14 @@
             </center>
 
             <div class="main_content">
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
-                <div class="content-block">
-                    <img class="content-block_img" src="./img/AirForce.png" alt="">
-                    <p class="content-block_text">КРОССОВКИ NIKE AIR FORCE 1 LOW ALL WHITE <br> <strong>3250₴</strong></p>
-                    <button type="button"  class="content-block_button">Add to the cart</button>
-                </div>
+
             </div>
 
-            <div class="pagination">
-                <div class="pagination_element pagination_element_left">
-                    <img src="./img/Pagination-left-arrow.svg" alt="">
+            <ul class="pagination">
+                <div class="pagination-numbers">
+                    
                 </div>
-                <div class="pagination_element">
-                    <p class="pagination_element_text">1</p>
-                </div>
-                <div class="pagination_element">
-                    <p class="pagination_element_text">2</p>
-                </div>
-                <div class="pagination_element">
-                    <p class="pagination_element_text">3</p>
-                </div>
-                <div class="pagination_element">
-                    <p class="pagination_element_text">4</p>
-                </div>
-                <div class="pagination_element">
-                    <p class="pagination_element_text">5</p>
-                </div>
-                <div class="pagination_element pagination_element_right">
-                    <img src="./img/Pagination-right-arrow.svg" alt="">
-                </div>
-            </div>
+            </ul>
 
         </main>
 
@@ -254,9 +189,10 @@
 
     </div>
 
-
-    <script src="./script/store.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="./script/animations.js"></script>
+    <script src="./script/products.js"></script>
+    <script src="./script/server.js"></script>
 
 </body>
 </html>

@@ -267,13 +267,16 @@ body {
                 height: 150px;
             }
             &_text {
+                width: 100%;
                 font-weight: 400;
                 font-size: 15px;
                 color: #FFFFFF;
+                padding-left: 15px;
                 margin-left: 15px;
-                strong {
-                    color: #C2FF92;
-                }
+            }
+            .sum {
+                margin-top: -50px;
+                color: #C2FF92;
             }
             &_button {
                 width: 80%;
@@ -318,6 +321,14 @@ body {
                 width: 20px;
                 height: 20px;
             }
+        }
+        .pagination-numbers {
+            width: 70%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .activePaginationEl {
+            background: rgb(113, 113, 113);
         }
     }
 

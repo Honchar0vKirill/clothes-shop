@@ -1,0 +1,49 @@
+@media screen and (max-width: 426px) {
+    .Title{
+        font-size: 17px;
+    }
+    .NameInput{
+        width: 250px;
+        height: 36px;
+        font-size: 10px;
+    }
+    .emailInput{
+        width: 250px;
+        height: 36px;
+        font-size: 10px;
+    }
+    .reviewsInput{
+        width: 250px;
+        height: 80px;
+        font-size: 10px;
+    }
+    .form{
+        gap: 20px;
+    }
+    p{
+        font-size: 15px;
+    }
+    .btnRemove{
+        width: 110px;
+        height: 30px;
+        font-size: 12px;
+        column-gap: 2px;
+    }
+    .btnConfirm{
+        width: 110px;
+        height: 30px;
+        font-size: 12px;
+        column-gap: 7px;
+    }
+    .btns{
+        display: flex;
+        margin-top: 30px;
+        column-gap: 20px;
+    }
+    .img1{
+        width: 32px;
+    }
+    .img2{
+        width: 18px;
+    }
+}
