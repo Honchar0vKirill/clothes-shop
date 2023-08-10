@@ -314,54 +314,9 @@ inputs.forEach((input) => {
   });
 });
 
-const endBtnTrue = document.querySelector('.end-btn-true');
-
-endBtnTrue.addEventListener('click', () => {
-  const formData = {
-    contactData: {
-      lastName: lastNameInput.value,
-      firstName: firstNameInput.value,
-      phone: phoneInput.value,
-      email: emailInput.value
-    },
-    quantity: quantity,
-    city: selectValue,
-    recipientData: {
-     
-    }
-  };
-  localStorage.setItem('orderData', JSON.stringify(formData));
-
-  const buttonHTML = `
-          <button style="width: 150px;
-                        height: 40px;
-                        background-color: #2E2727;
-                        border: #A0A0A0 1px solid;
-                        border-radius: 10px;
-                        color: #A0A0A0;
-                        cursor: pointer;
-                        margin-left: 25%;">
-            На головну
-          </button>
-        `;
-
-    document.body.innerHTML += buttonHTML;
 
 
- 
-  
-  document.body.innerHTML = '';
-  document.body.style.backgroundColor = '#2E2727';
 
-  const thankYouText = document.createElement('h1');
-
-  document.body.style.height = '738px';
-  thankYouText.style.marginLeft = '25%';
-  thankYouText.style.color = 'white';
-  thankYouText.textContent = 'Дякуємо за замовлення';
-  
-  document.body.appendChild(thankYouText);
-});
 
 
 
@@ -374,13 +329,45 @@ endBtnFalse.addEventListener('click', () => {
 });
 
 
-
 function clearLocalStorageAndRefresh() {
   localStorage.clear();
   location.reload();
+  window.location.href = `${baseUrlOrder}`;
 }
 
-rende
 
+
+
+const baseUrlOrder = "http://localhost:4000/orders" 
+
+
+
+const orderForm = {
+  name: document.querySelector('#lastNameInput'),
+  surname: document.getElementById('firstNameInput'),
+  phone: document.getElementById('phoneInput'),
+  email: document.getElementById('emailInput'),
+  count: document.querySelector('.number-num')
+}
+const conteiner = document.querySelector('.conteiner')
+const endBtnTrue = document.querySelector('.end-btn-true');
+
+endBtnTrue.addEventListener ('click', () => {
+    const orderData = {
+        name: orderForm.name.value,
+        surname: orderForm.surname.value,
+        phone: orderForm.phone.value,
+        email: orderForm.email.value,
+        count: orderForm.count.value
+    }
+    axios.post(`${baseUrlOrder}/create` , orderData)
+      .then((res) => {
+           conteiner.innerHTML = ""
+           console.log("Успішно")
+           setTimeout(() => {
+            window.location.href = `http://127.0.0.1:5501/design/listOrder/list.html`
+           }, 100)
+      })
+})
 
 
