@@ -265,12 +265,14 @@ function saveCheckboxState(checkboxId, localStorageKey) {
     if (checkbox.checked) {
       localStorage.setItem(localStorageKey, 'true');
       clearOtherCheckboxes(checkboxId);
+      orderForm.payType = checkboxId; 
     } else {
       localStorage.removeItem(localStorageKey);
+      orderForm.payType = null;
     }
-  });
+  })
 }
-
+  
 // Функція для очищення інших галочок
 function clearOtherCheckboxes(checkedCheckboxId) {
   const checkboxes = document.querySelectorAll('.pay-chek');
@@ -303,18 +305,18 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const inputs = document.querySelectorAll('.input-class');
 
-// Load input values from localStorage or set default values
 inputs.forEach((input) => {
   const inputId = input.id;
   input.value = localStorage.getItem(inputId) || '';
 
-  // Save input values to localStorage on input change
   input.addEventListener('input', () => {
     localStorage.setItem(inputId, input.value);
   });
 });
 
-
+saveCheckboxState('paymentOption1', 'paymentOption1');
+saveCheckboxState('paymentOption2', 'paymentOption2');
+saveCheckboxState('paymentOption3', 'paymentOption3')
 
 
 
@@ -347,7 +349,13 @@ const orderForm = {
   surname: document.getElementById('firstNameInput'),
   phone: document.getElementById('phoneInput'),
   email: document.getElementById('emailInput'),
-  count: document.querySelector('.number-num')
+  count: document.querySelector('.number-num'),
+  delivery: {
+     typeDel: null,
+     city: null
+  },
+  payType: null,
+  finishPrice: document.querySelector('.end-price')
 }
 const conteiner = document.querySelector('.conteiner')
 const endBtnTrue = document.querySelector('.end-btn-true');
@@ -358,7 +366,14 @@ endBtnTrue.addEventListener ('click', () => {
         surname: orderForm.surname.value,
         phone: orderForm.phone.value,
         email: orderForm.email.value,
-        count: orderForm.count.value
+        count: orderForm.count.value,
+        delivery: {
+              typeDel: orderForm.delivery.typeDel,
+              city: orderForm.delivery.city
+        },
+        payType: orderForm.payType,
+        finishPrice: orderForm.finishPrice.value
+
     }
     axios.post(`${baseUrlOrder}/create` , orderData)
       .then((res) => {
@@ -371,3 +386,23 @@ endBtnTrue.addEventListener ('click', () => {
 })
 
 
+checkbox1.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    checkbox2.checked = false;
+    orderForm.delivery.typeDel = 'Самовивіз з Укрпошти'; 
+    orderForm.delivery.city = '';
+  } else {
+    orderForm.delivery.typeDel = null
+  
+  }
+})
+
+checkbox2.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    checkbox1.checked = false;
+    orderForm.delivery.typeDel = 'Самовивіз з Новапошта'; 
+    orderForm.delivery.city = '';
+  } else {
+    orderForm.delivery.typeDel = null;
+  }
+})
