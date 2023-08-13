@@ -1,0 +1,27 @@
+body {
+    font-family: Arial, sans-serif;
+  }
+  
+  .order-card {
+    max-width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .order-info {
+    margin-top: 0;
+    text-align: center;
+  }
+  
+  .order-data {
+    margin-top: 10px;
+  }
+  
+  strong {
+    display: inline-block;
+    width: 100px;
+  }
+  
