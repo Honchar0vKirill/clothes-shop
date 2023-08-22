@@ -54,6 +54,7 @@ const renderReviews = (stote) => {
         </div>
         `
     })
+
 }
 
 renderReviews(reviewStore)

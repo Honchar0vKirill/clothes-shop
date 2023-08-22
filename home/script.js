@@ -2,9 +2,13 @@ const description = {
     name: document.querySelector('#name_active'),
     text: document.querySelector('#text_active')
 }
+const prev = document.querySelector('#btnPrev')
+const next = document.querySelector('#btnNext')
 
 const imgActive = document.querySelector('#img_active')
 const sliderBotton = document.querySelector('#sliderBotton')
+
+let indexActive = 0
 
 const reviews = [
     {
@@ -17,7 +21,7 @@ const reviews = [
         id: 2,
         name: "Олег ",
         text: "Купив Найк Air Force Black, чудові кроси за доступною ціною! Дуже зручні, ногам комфортно, вентиляція та амортизація на високому рівні" ,
-        img: ""
+        img: "https://4.bp.blogspot.com/-zpEbDYMj3oI/XCZzjvpUI3I/AAAAAAAAL1U/u2lIW8O-iKQrwL15fxk9g2qu9t9O-uBwQCLcBGAs/s1600/0%2B%252811%2529.jpg"
     },
     {
         id: 3,
@@ -29,48 +33,31 @@ const reviews = [
         id: 4,
         name: "Сергій",
         text: "Тут можна придбати круті кроси! Рекомендую!",
-        img: "https://d9fb8z61l19d7.cloudfront.net/wp-content/uploads/2022/07/developper-vos-soft-skills.webp"
+        img: "https://2.bp.blogspot.com/-B19ZfmctYyw/XCZsvfLIekI/AAAAAAAAL0A/t5y7fm9MYNwEGuqf2GN9oWTOAbB1nihYACLcBGAs/s1600/0%2B%25286%2529.jpg"
     }
 ]
 
-const renderSlider = (idCandaidate = 1) => {
-    let indexActive = null
-    reviews.forEach((review, index)=> {
-        if (review.id === idCandaidate) {
-            indexActive = index
-        }
-    })
-    descripyion.name.innerHTML = `${reviews[indexActive].name}`
-    descripyion.price.innerHTML = `${reviews[indexActive].text}`
-    imgActive.src=`${reviews[indexActive].img}`
+const renderSlider = (idCandaidate = 0) => {
+    description.name.innerHTML = `${reviews[idCandaidate].name}`
+    description.text.innerHTML = `${reviews[idCandaidate].text}`
+    imgActive.src=`${reviews[idCandaidate].img}`
     sliderBotton.innerHTML = ''
-    const prev = document.querySelector('#btnRrev')
-    const next = document.querySelector('#btnNext')
-
-    let setImage = () => {
-        imgActive.srs = `${reviews[indexActive].img}`
-        description.name = `${reviews[indexActive].name}`
-        descripyion.price= `${reviews[indexActive].text}`
-    }
-
-    let imgActive = 0
-    setImage()
-
-    next.addEventListener('click', () => {
-        if (imgActive < length-1) {
-           imgActive += 1
-       } else {
-           imgActive = 0
-       }
-       setImage()
-   })
-   
-   sliderBtns.prev.addEventListener('click', () => {
-       if (imgActive == 0) {
-           imgActive = length - 1
-       } else {
-           imgActive -= 1 
-       }
-       setImage()
-   })
 }
+
+next.addEventListener('click', () => {
+    if (indexActive < reviews.length-1) {
+       indexActive += 1
+   } else {
+    indexActive = 0
+   }
+   renderSlider(indexActive)
+})
+
+prev.addEventListener('click', () => {
+   if (indexActive == 0) {
+    indexActive = reviews.length - 1
+   } else {
+    indexActive -= 1 
+   }
+   renderSlider(indexActive)
+})
