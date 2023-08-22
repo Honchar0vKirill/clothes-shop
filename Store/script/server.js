@@ -31,7 +31,7 @@ const getbody = (productsCategory) => {
     axios.get(`${baseUrl}/list-by-category?category=${productsCategory}`)
     .then(res => {
         products = [...res.data]
-        renderProducts
+        renderProducts()
     })
 }
 
@@ -39,7 +39,7 @@ const getAllList = () => {
     axios.get(`${baseUrl}/list`)
     .then(res => {
         products = [...res.data]
-        renderProducts
+        renderProducts()
     })
 }
 
