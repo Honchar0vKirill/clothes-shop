@@ -12,11 +12,13 @@ function fetchAndDisplayOrderDetails() {
       nameElement.textContent = orderDetails.name;
       cityElement.textContent = orderDetails.delivery.city;
       finalPriceElement.textContent = orderDetails.finishPrice;
+      
     })
     .catch((error) => {
       console.error("Error fetching order details:", error);
     });
 }
+
 
 
 window.onload = fetchAndDisplayOrderDetails;
