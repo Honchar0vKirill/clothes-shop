@@ -17,6 +17,22 @@ const renderProduct = () => {
 
     productPrice.innerHTML = `${productInfo.price} ₴`
 
+    
+    const addToCartButton = document.querySelector('.btnAdd');
+    addToCartButton.addEventListener('click', () => {
+        const productToAdd = {
+            id: productInfo.id,
+            name: productInfo.name,
+            price: productInfo.price
+        };
+
+        let wishListStore = JSON.parse(localStorage.getItem('wishList')) || [];
+        wishListStore.push(productToAdd);
+        localStorage.setItem('wishList', JSON.stringify(wishListStore));
+
+        alert('Продукт додано до списку бажань!');
+    });
+
 }
 
 const getProduct = () => {
