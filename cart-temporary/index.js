@@ -2,11 +2,10 @@ const productsEl = document.querySelector('#productsList');
 const wishListStore = JSON.parse(localStorage.getItem('wishList')) || [];
 
 const renderProducts = () => {
-    productsEl.innerHTML = ''; 
+    productsEl.innerHTML = '';
 
-    wishListStore.forEach(productId => {
-        const productItem = products.find(product => product.id === productId);
-        if (productItem) {
+    wishListStore.forEach(productItem => {
+       
             productsEl.innerHTML += `
             <div class="productItem">
                 <p>${productItem.name}</p>        
@@ -16,8 +15,7 @@ const renderProducts = () => {
                     class="btnRemoveFromWishList"
                 >Видалити зі списку бажань</button>
             </div>
-            `;
-        }
+            `
     });
 
     const removeButtons = document.querySelectorAll('.btnRemoveFromWishList');
@@ -26,9 +24,10 @@ const renderProducts = () => {
             const productIdToRemove = btn.getAttribute('productId');
             const updatedWishList = wishListStore.filter(id => id !== productIdToRemove);
             localStorage.setItem('wishList', JSON.stringify(updatedWishList));
-            renderProducts(); 
+            renderProducts();
         });
     });
 };
 
 renderProducts();
+
