@@ -21,7 +21,9 @@ const renderProduct = () => {
     const addToCartButton = document.querySelector('.btnAdd');
     addToCartButton.addEventListener('click', () => {
         const productToAdd = {
+
             id: productInfo.id,
+            img: productInfo.imgUrl,
             name: productInfo.name,
             price: productInfo.price
         };
