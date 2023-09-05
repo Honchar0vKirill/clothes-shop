@@ -21,15 +21,16 @@ const renderProducts = () => {
                 <img src="${productItem.img}">
                 <p>${productItem.name}</p>        
                 <p>${productItem.price} грн</p>
-                <button>Замовити</button>
+                <button class="btnOrders">Замовити</button>
                 <button
                     productId="${productItem.id}"
                     class="btnRemoveFromWishList"
                 >Видалити зі списку бажань</button>
             </div>
         `
-    });
 
+    });
+    const orderProduct = document.querySelectorAll('.btnOrders');
     
     const removeButtons = document.querySelectorAll('.btnRemoveFromWishList');
     removeButtons.forEach(button => {
@@ -43,3 +44,17 @@ const renderProducts = () => {
 renderProducts();
 
 
+orderProduct.addEventListener('click', () => {
+    const productToOrder = {
+        id: productInfo.id,
+        img: productInfo.imgUrl,
+        name: productInfo.name,
+        price: productInfo.price
+    };
+
+    let orderDataInfo = JSON.parse(localStorage.getItem('wishList')) || [];
+    orderDataInfo.push(productToOrder);
+    localStorage.setItem('wishList', JSON.stringify(orderDataInfo));
+
+    
+});
