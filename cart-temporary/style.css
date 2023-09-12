@@ -2,41 +2,182 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
+    background: #2E2727;
 }
-
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
+a{
+    text-decoration: none;
+    color: grey;
 }
-
-.products-list {
-    border: 1px solid #ddd;
-    padding: 20px;
-    margin-top: 20px;
+.products-list{
+    display: flex !important;
+    width: 90%;
+    margin: 0px auto;
+    
+    gap: 4;
+    flex-wrap: wrap;
 }
 
 .productItem {
+    width: 18.5%;
+  height: 342px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  background: #524B4B;
+  border-radius: 12px;
+  padding-bottom: 10px;
+  margin-top: 50px;
+  margin-left: 60px;
+  padding: 10px;
+}
+
+
+.productItem img {
+    max-width: 100%;
+    height:200px;
+    margin-bottom: 10px;
+}
+
+
+.productItem p:nth-child(2) {
+    font-weight: bold;
+    color: white;
+}
+
+
+.productItem p:nth-child(3) {
+    color: #C2FF92; 
+    font-weight: bold;
+    margin-left: -70%;
+}
+
+
+.productItem button  {
+    width: 80%;
+    height: 33px;
+    border: none;
+    background: #7DA0FC;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #FFFFFF;
+    cursor: pointer;
+    transition-duration: 1s
+}
+
+
+.productItem .btnRemoveFromWishList {
+    width: 90%;
+    background-color: grey;
+}
+
+
+h1 {
+    margin-bottom: 20px;
+}
+.header {
+    width: 100%;
+    height: 132px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
-}
-
-.btnRemoveFromWishList {
-    background-color: #e74c3c;
+    position: relative;
+  }
+  .header_logo{
+    margin-left: 107px;
+  }
+  .header_nav {
+    margin-left: -20px;
+  }
+  .header_nav_ul {
+    width: 400px;
+    display: flex;
+    margin-left: -1000px;
+  }
+  .header_nav_ul .list_element {
+    margin-left: 30px;
+  }
+  .header_nav_ul .list_element a {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    transition-duration: 1s;
+  }
+  .header_nav_ul .list_element a:hover {
+    transition-duration: 1s;
     color: white;
-    border: none;
-    padding: 5px 10px;
-    cursor: pointer;
-}
-
-.btnRemoveFromWishList:hover {
-    background-color: #c0392b;
-}
-
-.productItem p {
-    margin: 0;
-    padding: 0;
-}
+  }
+  .header_nav_ul .active-list_element a {
+    color: #FFFFFF;
+    text-shadow: 0px 0px 10px #FFFFFF;
+  }
+  .header_instagram-img{
+    margin-left: 900px;
+    position: absolute;
+  }
+  .header .change-language {
+    display: flex;
+    align-items: center;
+    margin-left: 1100px ;
+    position: absolute;
+  }
+  .header .change-language_hr {
+    height: 50px;
+    margin: 0px 20px;
+  }
+  .header .change-language_button {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    color: #FFFFFF;
+  }
+  .header .change-language_active-button {
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7);
+  }
+  .header .burger-menu {
+    display: none;
+    opacity: 0;
+  }
+  .header .burger-menu hr {
+    width: 30px;
+  }
+  
+  .burger-menu_animationTurnOn {
+    transition-duration: 1s;
+  }
+  .burger-menu_animationTurnOn .upper-hr {
+    transform: rotate(-45deg) translateY(6px);
+    transition-duration: 1s;
+  }
+  .burger-menu_animationTurnOn .center-hr {
+    transform: rotate(45deg) translateY(-6px);
+    transition-duration: 1s;
+  }
+  .burger-menu_animationTurnOn .bottom-hr {
+    opacity: 0;
+    transition-duration: 1s;
+  }
+  
+  .burger-menu_animationTurnOf {
+    transition-duration: 1s;
+  }
+  .burger-menu_animationTurnOf .upper-hr {
+    transform: rotate(0deg) translateY(0px);
+    transition-duration: 1s;
+  }
+  .burger-menu_animationTurnOf .center-hr {
+    transform: rotate(0deg) translateY(0px);
+    transition-duration: 1s;
+  }
+  .burger-menu_animationTurnOf .bottom-hr {
+    opacity: 1;
+    transition-duration: 1s;
+  }
+  .my-wishListText{
+    font-size: 24px;
+    color: #FFFFFF;
+    margin: 75px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
