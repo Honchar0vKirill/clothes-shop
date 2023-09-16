@@ -23,21 +23,47 @@
     font-size: 10px;
     text-align: center;
   }
+  .hero-section {
+    width: 123%;
+  }
   .promo {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    width: 100%;
     margin: 10% 0;
   }
   .promo img {
-    width: 100%;
+    width: 125%;
   }
   .promo_list {
-    width: 80%;
-    margin-left: 0;
+    margin-left: -20px;
+  }
+  .promo_container h1 {
+    margin-top: 550px;
+    margin-left: 170px;
+    font-size: 15px;
+  }
+  .logo-block {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 90px;
+    margin-left: 170px;
+    margin-top: 550px;
+  }
+  .logo-block img {
+    width: 20px;
+  }
+  .logoWhite {
+    display: none;
+  }
+  .promo_list_item p {
+    width: 250px;
+    font-size: 10px;
+    margin-left: 25px;
   }
   .imgAtlete {
-    width: 320px;
+    margin-right: 30px;
   }
   .UserBlock {
     margin-top: 900px;
@@ -46,8 +72,8 @@
     margin-top: 100px;
   }
   .block {
-    width: 230px;
-    height: 185px;
+    width: 250px;
+    height: 190px;
   }
   .title {
     margin: 10% 50px;
@@ -138,6 +164,7 @@
     margin-left: 10px;
   }
   .footer-menuP-link {
+    margin-right: 20px;
     width: 450px;
   }
   .footer-menuP {
@@ -145,7 +172,7 @@
     margin-left: 5px;
   }
   .followUs {
-    width: 80px;
+    width: 100px;
     font-size: 9px;
     margin-left: 10px;
   }
@@ -153,7 +180,7 @@
     width: 10px;
   }
   footer {
-    width: 110%;
+    width: 320px;
   }
   .contactsH1 {
     font-size: 15px;
@@ -195,6 +222,7 @@
   }
   .paymentContainer {
     height: 50px;
+    gap: 20px;
   }
   .VISAblock {
     display: flex;
