@@ -189,7 +189,7 @@ select2.addEventListener('change', (e) => {
 // const increaseButton = document.querySelector('.str-p');
 // const numberDisplay = document.querySelector('.number-num');
 // const priceDisplay = document.querySelector('.price-text');
-// const endPriceDisplay = document.querySelector('.end-price');
+
 // let quantity = 1;
 // let price = priceDisplay.value;
 // let priceolso
@@ -215,10 +215,7 @@ select2.addEventListener('change', (e) => {
 
 
 
-// function updateEndPrice() {
-//   const endPrice = price * quantity;
-//   endPriceDisplay.textContent = `${price}грн`;
-// }
+
 
 // if (localStorage.getItem('quantity')) {
 //   quantity = parseInt(localStorage.getItem('quantity'));
@@ -266,9 +263,7 @@ if (cartItems && cartItems.length > 0) {
     }
 }
 
-
-
-
+const endPriceDisplay = document.querySelector('.end-price');
 const localPrice = JSON.parse(localStorage.getItem('cartItems'))
 localPrice = [{
   price: 1500
@@ -289,6 +284,7 @@ const renderPrice = () => {
   sum = count * price
   priceForm.text.innerHTML = `${sum} грн`
   priceForm.count.innerHTML= `${count}`
+  endPriceDisplay.textContent = `${sum}грн`;
 }
 renderPrice() 
 
