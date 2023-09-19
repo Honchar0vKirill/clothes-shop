@@ -183,122 +183,77 @@ select2.addEventListener('change', (e) => {
 });
 
 
-
-
-// const reduceButton = document.querySelector('.str-m');
-// const increaseButton = document.querySelector('.str-p');
-// const numberDisplay = document.querySelector('.number-num');
-// const priceDisplay = document.querySelector('.price-text');
-
-// let quantity = 1;
-// let price = priceDisplay.value;
-// let priceolso
-
-// function updateDisplay() {
-//   numberDisplay.textContent = quantity;
-//   priceDisplay.textContent = `${price}грн`;
-//   updateEndPrice();
-
-//   // Save values to localStorage
-//   localStorage.setItem('quantity', quantity);
-//   localStorage.setItem('price', price);
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// if (localStorage.getItem('quantity')) {
-//   quantity = parseInt(localStorage.getItem('quantity'));
-// }
-
-// if (localStorage.getItem('price')) {
-//   price = parseInt(localStorage.getItem('price'));
-// }
-
-// reduceButton.addEventListener('click', function() {
-//   if (quantity > 1) {
-//     quantity--;
-//     priceDisplay.value -= price ;
-//     updateDisplay();
-//   }
-// });
-
-// increaseButton.addEventListener('click', function() {
-//   quantity++;
-//   priceDisplay.value += price;
-//   updateDisplay();
-// });
-
-// updateDisplay();
-
-
 const cartItems = JSON.parse(localStorage.getItem('cartItems'));
 if (cartItems && cartItems.length > 0) {
-    
+   
     const selectedProduct = cartItems[0];
 
    
     const productNameElement = document.getElementById('productName');
-    const productPriceElement = document.getElementById('productPrice');
+    // const productPriceElement = document.getElementById('productPrice');
     const productImageElement = document.getElementById('productImage');
 
     if (productNameElement) {
         productNameElement.textContent = selectedProduct.name;
-    }
-    if (productPriceElement) {
-        productPriceElement.textContent = `${selectedProduct.price}грн`;
     }
     if (productImageElement) {
         productImageElement.src = selectedProduct.img;
     }
 }
 
+
+
+
+
+const reduceButton = document.querySelector('.str-m');
+const increaseButton = document.querySelector('.str-p');
+const numberDisplay = document.querySelector('.number-num');
+const priceDisplay = document.querySelector('#productPrice');
 const endPriceDisplay = document.querySelector('.end-price');
-const localPrice = JSON.parse(localStorage.getItem('cartItems'))
-localPrice = [{
-  price: 1500
-}]
-let price = localPrice[0].price
-let sum = 1500
-let count = 1
-const priceForm = {
-  btns: {
-    minus: document.querySelector('.str-m'),
-    plus: document.querySelector('.str-p'),
-    
-  },
-  text: document.querySelector('#productPrice'),
-  count: document.querySelector('.number-num')
-}
-const renderPrice = () => {
-  sum = count * price
-  priceForm.text.innerHTML = `${sum} грн`
-  priceForm.count.innerHTML= `${count}`
-  endPriceDisplay.textContent = `${sum}грн`;
-}
-renderPrice() 
+let quantity = 1;
+let price = 1500;
+let priceolso
 
-priceForm.btns.minus.addEventListener('click', () => {
-  if(count > 1) {
-    count -= 1
-    renderPrice()
+function updateDisplay() {
+  numberDisplay.textContent = quantity;
+  priceDisplay.textContent = `${price}грн`;
+  updateEndPrice();
+
+  // Save values to localStorage
+  localStorage.setItem('quantity', quantity);
+  localStorage.setItem('price', price);
+}
+
+function updateEndPrice() {
+  const endPrice = price * quantity;
+  endPriceDisplay.textContent = `${price}грн`;
+}
+
+if (localStorage.getItem('quantity')) {
+  quantity = parseInt(localStorage.getItem('quantity'));
+}
+
+if (localStorage.getItem('price')) {
+  price = parseInt(localStorage.getItem('price'));
+}
+
+reduceButton.addEventListener('click', function() {
+  if (quantity > 1) {
+    quantity--;
+    price -= 1500 ;
+    updateDisplay();
   }
-})
+});
 
-priceForm.btns.plus.addEventListener('click', () => {
-    count += 1
-    renderPrice()
-})
+increaseButton.addEventListener('click', function() {
+  quantity++;
+  price += 1500;
+  updateDisplay();
+});
+
+updateDisplay();
+
+
 
 
 
