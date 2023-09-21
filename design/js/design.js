@@ -183,18 +183,22 @@ select2.addEventListener('change', (e) => {
 });
 
 
+// Get the product information from localStorage
 const cartItems = JSON.parse(localStorage.getItem('cartItems'));
 if (cartItems && cartItems.length > 0) {
-   
+    // Assuming the first item in cartItems contains the product information
     const selectedProduct = cartItems[0];
 
-   
+    // Update the content of the productName, productPrice, and productImage elements
     const productNameElement = document.getElementById('productName');
-    // const productPriceElement = document.getElementById('productPrice');
+    const productPriceElement = document.getElementById('productPrice');
     const productImageElement = document.getElementById('productImage');
 
     if (productNameElement) {
         productNameElement.textContent = selectedProduct.name;
+    }
+    if (productPriceElement) {
+        productPriceElement.textContent = `${selectedProduct.price}грн`;
     }
     if (productImageElement) {
         productImageElement.src = selectedProduct.img;
@@ -210,8 +214,9 @@ const increaseButton = document.querySelector('.str-p');
 const numberDisplay = document.querySelector('.number-num');
 const priceDisplay = document.querySelector('#productPrice');
 const endPriceDisplay = document.querySelector('.end-price');
+const list = JSON.parse(localStorage.getItem('List'))
 let quantity = 1;
-let price = 1500;
+let price = list[0]
 let priceolso
 
 function updateDisplay() {
@@ -223,6 +228,17 @@ function updateDisplay() {
   localStorage.setItem('quantity', quantity);
   localStorage.setItem('price', price);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 function updateEndPrice() {
   const endPrice = price * quantity;
