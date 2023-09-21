@@ -25,8 +25,9 @@
 
                 <ul class="header_nav_ul">
                     <li class="list_element active-list_element"><a href="#">Home</a></li>
-                    <li class="list_element"><a href="#">Store</a></li>
-                    <li class="list_element"><a href="#">Cart</a></li>
+                    <li class="list_element"><a href="/Store/store.html">Store</a></li>
+                    <li class="list_element"><a href="/cart-temporary/index.html">Cart</a></li>
+                    <li class="list_element"><a href="#">About us</a></li>
                 </ul>
 
             </nav>
@@ -72,66 +73,69 @@
             <h1>Our Latest Product</h1>
             <p>Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
             <div class="hero-section_slider">
-                <div class="hero-section_slider_content">
-                    <button class="hero-section_slider_btn" id="prevBtn"><img src="./img/icons/arrow-left.png"></button>
-                    <div id="pegasus" class="hero-section_slider_content_item"><img src="./img/custom-pegasus.png" alt="custom pegasus"></div>
-                    <div id="airForces" class="hero-section_slider_content_item"><img src="./img/af1.png" alt="air forces"></div>
-                    <div id="airForcesHigh" class="hero-section_slider_content_item"><img src="./img/af1-high.png" alt="air forces high"></div>
-                    <div id="airMax" class="hero-section_slider_content_item"><img src="./img/air-max.png" alt="air max'es"></div>
-                    <div id="blazers" class="hero-section_slider_content_item"><img src="./img/blazer.png" alt="blazers"></div>
-                    <button class="hero-section_slider_btn" id="nextBtn"><img src="./img/icons/arrow-right.png"></button>
-                </div>
+                <div class="hero-section_slider_block"><img src="./img/custom-pegasus.png"></div>
+                <div class="hero-section_slider_block"><img src="./img/af1.png"></div>
+                <div class="hero-section_slider_block"><img src="./img/af1-high.png" alt="air forces high"></div>
+                <div class="hero-section_slider_block"><img src="./img/air-max.png"></div>
+                <div class="hero-section_slider_block"><img src="./img/blazer.png"></div>
+                <div class="hero-section_slider_block"><img src="./img/a0273b4ec1f5e4782bb25610e567f5c7.jpg"></div>
+                <div class="hero-section_slider_block"><img src="./img/nike-air-jordan-1-low-snkrs-day-1000x1000-removebg-preview 1.png"></div>
+                <div class="hero-section_slider_block"><img src="./img/DQ5499_200_a-removebg-preview.png"></div>
             </div>
         </div>
         <div class="promo">
-            <img src="./img/atlete.png">
+            <img class="imgAtlete" src="./img/atlete.png">
             <div class="promo_container">
                 <h1>The best clothes for the best people.</h1>
+                <div class="logo-block">
+                    <img src="../home/img/logo-white.png"> 
+                    <img src="../home/img/logo-white.png"> 
+                    <img src="../home/img/logo-white.png"> 
+                    <img src="../home/img/logo-white.png">
+                    <img src="../home/img/logo-white.png">
+                </div>
                 <div class="promo_list">
-                    <div class="promo_list_item"><img src="../home/img/logo-white.png">
+                    <div class="promo_list_item">
+                    <img class="logoWhite"  src="../home/img/logo-white.png">
                     <p>Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
                     </div>
-                    <div class="promo_list_item"><img src="../home/img/logo-white.png">
+                    <div class="promo_list_item"><img  class="logoWhite" src="../home/img/logo-white.png">
                         <p>Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
                     </div>
-                    <div class="promo_list_item"><img src="../home/img/logo-white.png">
+                    <div class="promo_list_item"><img  class="logoWhite"  src="../home/img/logo-white.png">
                         <p>Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
                     </div>
-                    <div class="promo_list_item"><img src="../home/img/logo-white.png">
+                    <div class="promo_list_item"><img  class="logoWhite"  src="../home/img/logo-white.png">
                         <p>Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
                     </div>
-                    <div class="promo_list_item"><img src="../home/img/logo-white.png">
+                    <div class="promo_list_item"><img  class="logoWhite" src="../home/img/logo-white.png">
                         <p>Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
                     </div>
                 </div>
-
             </div>
         </div>
         <div class="UserBlock">
-            <button class="btn">
+            <button id="btnPrev" class="btn">
                 <img class="arrow" src="./img/Page-1.svg">
             </button>
             <div class="block">
                 <p class="title">Greatest Reviews</p>
                 <div class="itemBlock">
-                    <img class="profile" src="./img/Ellipse 2.svg">
+                    <img id="img_active" class="profile" src="./img/Ellipse 2.svg">
                     <div class="Block">
-                        <p class="Name">Shahriar Sohag</p>
-                        <p class="text">Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
+                        <p id="name_active" class="Name">Shahriar Sohag</p>
+                        <p id="text_active" class="text">Now that you have a ready strategy to move forward, it’s time to come up with some ideas.</p>
                     </div>
                 </div>
                 <p class="designer">UI Designer</p>
             </div>
-            <button class="btn">
+            <button id="btnNext" class="btn">
                 <img class="arrow" src="./img/Page-1 (1).svg">
             </button>
         </div>
         <div class="btns">
             <button class="btnMore">More Reviews</button>
-            <div class="circl">
-                <img src="./img/Ellipse 3.svg">
-                <img src="./img/Ellipse 4.svg">
-                <img src="./img/Ellipse 3.svg">
+            <div id="sliderBotton"  class="circl">
             </div>
         </div>
         <p class="Title2">Write Your Review</p>
@@ -150,9 +154,10 @@
                     <img class="footer-logo" src="./img/HeaderLogo.svg" alt="">
                 </div>
                 <div class="footer-menuP-link">
-                    <a href=""><p class="footer-menuP">Home</p></a>
-                    <a href=""><p class="footer-menuP">Store</p></a>
-                    <a href=""><p class="footer-menuP">Cart</p></a>
+                    <a href="/home/index.html"><p class="footer-menuP">Home</p></a>
+                    <a href="/Store/store.html"><p class="footer-menuP">Store</p></a>
+                    <a href="/cart-temporary/index.html"><p class="footer-menuP">Cart</p></a>
+                    <a href="#"><p class="footer-menuP">About us</p></a>
                 </div>
                 <div class="footerFollowUsBLock">
                     <p class="followUs">Follow Us :
@@ -187,7 +192,7 @@
             </div>
             <div class="paymentContainer">
                 <div class="VISAblock">
-                    <img src="./img/visa.svg" alt="">
+                    <img class="imgVisa" src="./img/visa.svg" alt="">
                 </div>
                 <div class="masterCardblock">
                     <img src="./img/masterCard.svg" alt="">

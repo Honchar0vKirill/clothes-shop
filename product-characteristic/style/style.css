@@ -283,6 +283,7 @@ body {
 .productBlock2{
   display: flex;
   justify-content: space-between;
+  align-items: flex-start;
   column-gap: 230px;
 }
 .acordion{

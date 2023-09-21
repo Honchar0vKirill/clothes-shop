@@ -1,0 +1,46 @@
+@media  (max-width: 425px) and (min-width: 376px) {
+    .conteiner {
+        margin-left: -100px;
+    }
+    .input-class{
+        width: 150px;
+    }
+    .inputs{
+        margin-left: -30px;
+    }
+    .inputs-class .inputs-class {
+        width: 150px !important;
+    }
+    .name-text-end{
+        width: 350px;
+        font-size: 15;
+        margin-left: -2px;
+    }
+    .inputs-media{
+        margin-left: -80px;
+    }
+    .kross-text{
+        width: 100px;
+        height: 100px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 100;
+        font-size: 20px;
+        line-height: 19px;
+    }
+    .number{
+        margin-left: -35px;
+    }
+    .select-block{
+        width: 320px;
+    }
+    .select{
+        width: 200px;
+    }
+    .end-btn-div{
+        margin-left: -60px;
+    }
+    .goods{
+        margin-left: -100px;
+    }
+}

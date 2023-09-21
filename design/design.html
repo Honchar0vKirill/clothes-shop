@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./design.css">
+    <link rel="stylesheet" href="./media/1024.css">
+    <link rel="stylesheet" href="./media/768.css">
+    <link rel="stylesheet" href="./media/425.css">
     <title>Home</title>
 </head>
 <body>
@@ -15,7 +18,7 @@
             <div class="number-info">1</div>
             <div class="more-info">
                 <h3 class="contact-text-h">Ваші контакні дані</h3>
-                <div class="inputs">
+                <div class="inputs inputs-media">
                     <div class="input-1">
                       <p class="input-text">Прізвище</p>
                       <input class="input-class" type="text" id="lastNameInput">
@@ -41,10 +44,10 @@
             </div>
                 <div class="goods">
                     <div class="goods-info">
-                        <img class="kross-img" src="./img/kross.png" alt="">
-                        <p class="kross-text">КРОСІВКИ NIKE AIR FORCE 1 LOW ALL WHITE</p>
+                        <img class="kross-img" id="productImage" src="./img/kross.png" alt="">
+                        <p id="productName" class="kross-text">КРОСІВКИ NIKE AIR FORCE 1 LOW ALL WHITE</p>
                         <div class="number">
-                            <p class="price-text">3500грн</p>
+                            <p class="price-text" id="productPrice">3500грн</p>
                             <div class="number-selection">
                                 <img class="str str-m " src="./img/screlka1.png" alt="">
                                 <p class="number-num">1</p>
@@ -89,26 +92,7 @@
                       </div>
                       
                 </div>
-            <div class="name-order">
-                <div class="number-info">4</div>
-                <h1 class="name-text">Контакні дані отримувача замовлення</h1>
-            </div>
-            <div>
-                <div class="inputs inputs-class">
-                    <div class="input-1">
-                      <p class="input-text">Прізвище</p>
-                      <input class="input-class" type="text" id="lastNameInput">
-                      <p class="input-text">По батьков</p>
-                      <input class="input-class" type="tel" id="phoneInput">
-                    </div>
-                    <div class="input-2">
-                      <p class="input-text">Імя</p>
-                      <input class="input-class" type="name" id="firstNameInput">
-                      <p class="input-text">Електронна пошта</p>
-                      <input class="input-class" type="email" id="emailInput">
-                    </div>
-                  </div>                  
-            </div>
+                
             <p class="end-text">До сплати :<span class="end-price"></span></p>
             <div class="end-btn-div">
                 <button class="end-btn-true">Підтверити замовлення</button>
@@ -116,6 +100,8 @@
             </div>
         </div>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./js/design.js"></script>
+    
 </body>
 </html>

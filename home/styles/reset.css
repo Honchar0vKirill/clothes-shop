@@ -33,13 +33,14 @@ a {
 body {
    line-height: 1;
    background: #2E2727;
+   margin: 0 auto;
 }
 
 html, body {
     width: 100%;
     display: flex;
     justify-content: center;
-    height: 100%;
+    height: 100%; 
 }
 
 ol, ul {

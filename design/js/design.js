@@ -102,11 +102,6 @@ if (checkbox2State === 'checked') {
   select2.innerHTML = null;
 }
 
-// Відновлюємо значення select
-if (selectValue) {
-  const select = checkbox1.checked ? document.getElementById('select1') : document.getElementById('select2');
-  select.value = selectValue;
-}
 
 checkbox1.addEventListener('change', (e) => {
   if (e.target.checked) {
@@ -188,15 +183,35 @@ select2.addEventListener('change', (e) => {
 });
 
 
+const cartItems = JSON.parse(localStorage.getItem('cartItems'));
+if (cartItems && cartItems.length > 0) {
+   
+    const selectedProduct = cartItems[0];
+
+   
+    const productNameElement = document.getElementById('productName');
+    // const productPriceElement = document.getElementById('productPrice');
+    const productImageElement = document.getElementById('productImage');
+
+    if (productNameElement) {
+        productNameElement.textContent = selectedProduct.name;
+    }
+    if (productImageElement) {
+        productImageElement.src = selectedProduct.img;
+    }
+}
+
+
+
 
 
 const reduceButton = document.querySelector('.str-m');
 const increaseButton = document.querySelector('.str-p');
 const numberDisplay = document.querySelector('.number-num');
-const priceDisplay = document.querySelector('.price-text');
+const priceDisplay = document.querySelector('#productPrice');
 const endPriceDisplay = document.querySelector('.end-price');
 let quantity = 1;
-let price = 3500;
+let price = 1500;
 let priceolso
 
 function updateDisplay() {
@@ -209,20 +224,9 @@ function updateDisplay() {
   localStorage.setItem('price', price);
 }
 
-
-
-
-
-
-
-
-
-
-
-
 function updateEndPrice() {
   const endPrice = price * quantity;
-  endPriceDisplay.textContent = `${endPrice}грн`;
+  endPriceDisplay.textContent = `${price}грн`;
 }
 
 if (localStorage.getItem('quantity')) {
@@ -236,18 +240,20 @@ if (localStorage.getItem('price')) {
 reduceButton.addEventListener('click', function() {
   if (quantity > 1) {
     quantity--;
-    price -= 3500;
+    price -= 1500 ;
     updateDisplay();
   }
 });
 
 increaseButton.addEventListener('click', function() {
   quantity++;
-  price += 3500;
+  price += 1500;
   updateDisplay();
 });
 
 updateDisplay();
+
+
 
 
 
@@ -270,12 +276,14 @@ function saveCheckboxState(checkboxId, localStorageKey) {
     if (checkbox.checked) {
       localStorage.setItem(localStorageKey, 'true');
       clearOtherCheckboxes(checkboxId);
+      orderForm.payType = checkboxId; 
     } else {
       localStorage.removeItem(localStorageKey);
+      orderForm.payType = null;
     }
-  });
+  })
 }
-
+  
 // Функція для очищення інших галочок
 function clearOtherCheckboxes(checkedCheckboxId) {
   const checkboxes = document.querySelectorAll('.pay-chek');
@@ -308,63 +316,20 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const inputs = document.querySelectorAll('.input-class');
 
-// Load input values from localStorage or set default values
 inputs.forEach((input) => {
   const inputId = input.id;
   input.value = localStorage.getItem(inputId) || '';
 
-  // Save input values to localStorage on input change
   input.addEventListener('input', () => {
     localStorage.setItem(inputId, input.value);
   });
 });
 
-const endBtnTrue = document.querySelector('.end-btn-true');
-
-endBtnTrue.addEventListener('click', () => {
-  const formData = {
-    contactData: {
-      lastName: lastNameInput.value,
-      firstName: firstNameInput.value,
-      phone: phoneInput.value,
-      email: emailInput.value
-    },
-    quantity: quantity,
-    city: selectValue,
-    recipientData: {
-     
-    }
-  };
-  localStorage.setItem('orderData', JSON.stringify(formData));
-
-  const button = document.createElement('button');
-  button.style.width = '150px';
-  button.style.height = '40px';
-  button.style.backgroundColor = '#2E2727';
-  button.style.border = '#A0A0A0 1px solid';
-  button.style.borderRadius = '10px';
-  button.style.color = '#A0A0A0';
-  button.style.cursor = 'pointer';
-  button.style.marginLeft = '25%';
-  button.textContent = 'На головну';
-  document.body.appendChild(button);
+saveCheckboxState('paymentOption1', 'paymentOption1');
+saveCheckboxState('paymentOption2', 'paymentOption2');
+saveCheckboxState('paymentOption3', 'paymentOption3')
 
 
-
- 
-  
-  document.body.innerHTML = '';
-  document.body.style.backgroundColor = '#2E2727';
-
-  const thankYouText = document.createElement('h1');
-
-  document.body.style.height = '738px';
-  thankYouText.style.marginLeft = '25%';
-  thankYouText.style.color = 'white';
-  thankYouText.textContent = 'Дякуємо за замовлення';
-  
-  document.body.appendChild(thankYouText);
-});
 
 
 
@@ -377,11 +342,85 @@ endBtnFalse.addEventListener('click', () => {
 });
 
 
-
 function clearLocalStorageAndRefresh() {
   localStorage.clear();
   location.reload();
+  window.location.href = `${baseUrlOrder}`;
 }
+
+
+
+
+const baseUrlOrder = "http://localhost:4000/orders" 
+
+
+
+const orderForm = {
+  name: document.querySelector('#lastNameInput'),
+  surname: document.getElementById('firstNameInput'),
+  phone: document.getElementById('phoneInput'),
+  email: document.getElementById('emailInput'),
+  count: document.querySelector('.number-num'),
+  delivery: {
+     typeDel: null,
+     city: null
+  },
+  payType: null,
+  finishPrice: document.querySelector('.end-price')
+}
+const conteiner = document.querySelector('.conteiner')
+const endBtnTrue = document.querySelector('.end-btn-true');
+
+endBtnTrue.addEventListener ('click', () => {
+    const orderData = {
+        name: orderForm.name.value,
+        surname: orderForm.surname.value,
+        phone: orderForm.phone.value,
+        email: orderForm.email.value,
+        count: orderForm.count.value,
+        delivery: {
+              typeDel: orderForm.delivery.typeDel,
+              city: orderForm.delivery.city
+        },
+        payType: orderForm.payType,
+        finishPrice: orderForm.finishPrice.value
+
+    }
+    axios.post(`${baseUrlOrder}/create` , orderData)
+      .then((res) => {
+           conteiner.innerHTML = ""
+           console.log("Успішно")
+           setTimeout(() => {
+            const queryParams = encodeURIComponent(JSON.stringify(orderData));
+            window.location.href = `http://127.0.0.1:5501/listOrder/list.html`
+           }, 100)
+      })
+})
+
+
+checkbox1.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    checkbox2.checked = false;
+    orderForm.delivery.typeDel = 'Самовивіз з Укрпошти'; 
+    orderForm.delivery.city = '';
+  } else {
+    orderForm.delivery.typeDel = null
+  
+  }
+})
+
+checkbox2.addEventListener('change', (e) => {
+  if (e.target.checked) {
+    checkbox1.checked = false;
+    orderForm.delivery.typeDel = 'Самовивіз з Новапошта'; 
+    orderForm.delivery.city = '';
+  } else {
+    orderForm.delivery.typeDel = null;
+  }
+})
+
+
+
 
 
 

@@ -1,6 +1,8 @@
 const body = document.querySelector('.main_content')
+const btnsList = document.querySelectorAll('.products-nav_ul_element')
 
 let products = []
+const baseUrl = 'http://localhost:4000/products'
 
 const renderProducts = () => { 
     body.innerHTML = ""
@@ -25,6 +27,32 @@ const renderProducts = () => {
         })
     })
 }
+
+const getbody = (productsCategory) => {
+    axios.get(`${baseUrl}/list-by-category?category=${productsCategory}`)
+    .then(res => {
+        products = [...res.data]
+        renderProducts()
+    })
+}
+
+const getAllList = () => {
+    axios.get(`${baseUrl}/list`)
+    .then(res => {
+        products = [...res.data]
+        renderProducts()
+    })
+}
+
+btnsList.forEach((btnItem) => {
+    btnItem.addEventListener('click', () => {
+        if (btnItem.innerText === "All") {
+            getAllList
+        } else {
+            getbody(btnItem.innerText)
+        }
+    })
+})
 
 const getProducts = () => {
     axios.get("http://localhost:4000/products/list")
