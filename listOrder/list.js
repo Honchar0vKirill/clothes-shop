@@ -1,24 +1,14 @@
-const baseUrlOrder = "http://localhost:4000/orders";
-const orderInfoContainer = document.querySelector(".order-data");
-const nameElement = document.getElementById("name");
-const cityElement = document.getElementById("city");
-const finalPriceElement = document.getElementById("finalPrice");
+const orderInfoContainer = document.querySelector('.order-data');
+const nameElement = document.getElementById('name');
+const cityElement = document.getElementById('city');
+const finalPriceElement = document.getElementById('finalPrice');
 
+const orders = JSON.parse(localStorage.getItem('orders')) || [];
+const selectedOrder = orders[0]; 
 
-function fetchAndDisplayOrderDetails() {
-  axios.get(`${baseUrlOrder}/list`)
-    .then((res) => {
-      const orderDetails = res.data; 
-      nameElement.textContent = orderDetails.name;
-      cityElement.textContent = orderDetails.delivery.city;
-      finalPriceElement.textContent = orderDetails.finishPrice;
-      
-    })
-    .catch((error) => {
-      console.error("Error fetching order details:", error);
-    });
+function displayOrderDetails(orderData) {
+  nameElement.textContent = orderData.surname;
+  cityElement.textContent = orderData.delivery.city;
+  finalPriceElement.textContent = orderData.finishPrice;
 }
-
-
-
-window.onload = fetchAndDisplayOrderDetails;
+displayOrderDetails(selectedOrder)
