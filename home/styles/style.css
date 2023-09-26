@@ -268,7 +268,9 @@ body {
   width: 660px;
   height: 669px;
 }
-
+.logo-block{
+  display: none;
+}
 .promo_list h1 {
   font-family: "Raleway";
   font-style: normal;

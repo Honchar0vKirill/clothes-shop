@@ -183,18 +183,22 @@ select2.addEventListener('change', (e) => {
 });
 
 
+// Get the product information from localStorage
 const cartItems = JSON.parse(localStorage.getItem('cartItems'));
 if (cartItems && cartItems.length > 0) {
-   
+    // Assuming the first item in cartItems contains the product information
     const selectedProduct = cartItems[0];
 
-   
+    // Update the content of the productName, productPrice, and productImage elements
     const productNameElement = document.getElementById('productName');
-    // const productPriceElement = document.getElementById('productPrice');
+    const productPriceElement = document.getElementById('productPrice');
     const productImageElement = document.getElementById('productImage');
 
     if (productNameElement) {
         productNameElement.textContent = selectedProduct.name;
+    }
+    if (productPriceElement) {
+        productPriceElement.textContent = `${selectedProduct.price}грн`;
     }
     if (productImageElement) {
         productImageElement.src = selectedProduct.img;
@@ -211,7 +215,7 @@ const numberDisplay = document.querySelector('.number-num');
 const priceDisplay = document.querySelector('#productPrice');
 const endPriceDisplay = document.querySelector('.end-price');
 let quantity = 1;
-let price = 1500;
+let price = 1500
 let priceolso
 
 function updateDisplay() {
@@ -223,6 +227,17 @@ function updateDisplay() {
   localStorage.setItem('quantity', quantity);
   localStorage.setItem('price', price);
 }
+
+
+
+
+
+
+
+
+
+
+
 
 function updateEndPrice() {
   const endPrice = price * quantity;
@@ -345,7 +360,7 @@ endBtnFalse.addEventListener('click', () => {
 function clearLocalStorageAndRefresh() {
   localStorage.clear();
   location.reload();
-  window.location.href = `${baseUrlOrder}`;
+  window.location.href = "http://127.0.0.1:5501/design/design.html";
 }
 
 
@@ -363,7 +378,7 @@ const orderForm = {
   count: document.querySelector('.number-num'),
   delivery: {
      typeDel: null,
-     city: null
+     city: select1
   },
   payType: null,
   finishPrice: document.querySelector('.end-price')
@@ -371,31 +386,52 @@ const orderForm = {
 const conteiner = document.querySelector('.conteiner')
 const endBtnTrue = document.querySelector('.end-btn-true');
 
-endBtnTrue.addEventListener ('click', () => {
-    const orderData = {
-        name: orderForm.name.value,
-        surname: orderForm.surname.value,
-        phone: orderForm.phone.value,
-        email: orderForm.email.value,
-        count: orderForm.count.value,
-        delivery: {
-              typeDel: orderForm.delivery.typeDel,
-              city: orderForm.delivery.city
-        },
-        payType: orderForm.payType,
-        finishPrice: orderForm.finishPrice.value
+endBtnTrue.addEventListener('click', () => {
+  const orderData = {
+    name: orderForm.name.value,
+    surname: orderForm.surname.value,
+    phone: orderForm.phone.value,
+    email: orderForm.email.value,
+    count: orderForm.count.value,
+    delivery: {
+      typeDel: orderForm.delivery.typeDel,
+      city: orderForm.delivery.city,
+    },
+    payType: orderForm.payType,
+    finishPrice: orderForm.finishPrice.value,
+  };
+  
 
-    }
-    axios.post(`${baseUrlOrder}/create` , orderData)
-      .then((res) => {
-           conteiner.innerHTML = ""
-           console.log("Успішно")
-           setTimeout(() => {
-            const queryParams = encodeURIComponent(JSON.stringify(orderData));
-            window.location.href = `http://127.0.0.1:5501/listOrder/list.html`
-           }, 100)
-      })
-})
+  const existingOrders = JSON.parse(localStorage.getItem('orders')) || [];
+
+  existingOrders.push(orderData);
+
+  localStorage.setItem('orders', JSON.stringify(orderData));
+  
+  conteiner.innerHTML = '';
+  console.log('Успішно');
+  setTimeout(() => {
+    const queryParams = encodeURIComponent(JSON.stringify(orderData));
+    window.location.href = `http://127.0.0.1:5501/listOrder/list.html`;
+  }, 100);
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 checkbox1.addEventListener('change', (e) => {
