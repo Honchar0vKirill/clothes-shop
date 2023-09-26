@@ -406,7 +406,7 @@ endBtnTrue.addEventListener('click', () => {
 
   existingOrders.push(orderData);
 
-  localStorage.setItem('orders', JSON.stringify(existingOrders));
+  localStorage.setItem('orders', JSON.stringify(orderData));
   
   conteiner.innerHTML = '';
   console.log('Успішно');
