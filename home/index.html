@@ -161,11 +161,16 @@
                 </div>
                 <div class="footerFollowUsBLock">
                     <p class="followUs">Follow Us :
-                        <a href="https://uk-ua.facebook.com/"><img src="./img/facebook.svg" alt=""></a>
-                        <a href="https://www.instagram.com/"><img src="./img/twitter.svg" alt=""></a>
-                        <a href="https://twitter.com/?lang=ru"><img src="./img/Insta.svg" alt=""></a>
+                        <a href="#" onclick="redirectTo('https://uk-ua.facebook.com/')"><img src="./img/facebook.svg" alt=""></a>
+                        <a href="#" onclick="redirectTo('https://www.instagram.com/')"><img src="./img/twitter.svg" alt=""></a>
+                        <a href="#" onclick="redirectTo('https://twitter.com/?lang=ru')"><img src="./img/Insta.svg" alt=""></a>
                     </p>
                 </div>
+                <script>
+                    function redirectTo(url) {
+                        window.location.href = url;
+                    }
+                </script>
             </div>
             <h1 class="contactsH1">Contacts</h1>
             <div class="ContactsCotainer">
@@ -175,9 +180,22 @@
                         <p class="mailP">Nikee@gmail.com</p>
                     </div>
                     <div class="gps">
-                        <img class="gpsImg" src="/home/img/gps.svg" alt="">
+                        <a href="#" id="gpsLink">
+                            <img class="gpsImg" src="/home/img/gps.svg" alt="">
+                        </a>
                         <p class="gpsP">Київ -- бульвар Лесі Українки</p>
                     </div>
+                    
+                    <script>
+                        // Отримуємо посилання на зображення і додаємо обробник подій
+                        var gpsImg = document.querySelector('.gpsImg');
+                        gpsImg.addEventListener('click', function(event) {
+                            event.preventDefault(); // Відміняємо стандартну дію по кліку на посиланні
+                            // Задаємо URL для карти і відкриваємо її в новому вікні або вкладці
+                            var mapUrl = 'https://maps.google.com?q=Київ, бульвар Лесі Українки';
+                            window.open(mapUrl, '_blank');
+                        });
+                    </script>
                 </div>
                 <div class="contactBlockTwo">
                     <div class="phoneNumber">
