@@ -192,15 +192,29 @@
             </div>
             <div class="paymentContainer">
                 <div class="VISAblock">
-                    <img class="imgVisa" src="./img/visa.svg" alt="">
+                    <img class="imgVisa" src="./img/visa.svg" alt="" onclick="openVisaSite()">
                 </div>
                 <div class="masterCardblock">
-                    <img src="./img/masterCard.svg" alt="">
+                    <img src="./img/masterCard.svg" alt="" onclick="openMasterCardSite()">
                 </div>
                 <div class="applePayblock">
-                    <img src="./img/applePay.svg" alt="">
+                    <img src="./img/applePay.svg" alt="" onclick="openApplePaySite()">
                 </div>
             </div>
+            
+            <script>
+                function openVisaSite() {
+                    window.open('https://www.visa.com', '_blank');
+                }
+            
+                function openMasterCardSite() {
+                    window.open('https://www.mastercard.com', '_blank');
+                }
+            
+                function openApplePaySite() {
+                    window.open('https://www.apple.com/apple-pay/', '_blank');
+                }
+            </script>
             <div class="AlertBlock">
                 <a href="./footer-abc/footerABC.html"><p class="Alert">ALERT</p></a>
             </div>
