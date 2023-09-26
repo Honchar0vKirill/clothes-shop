@@ -237,10 +237,12 @@ body {
 }
 
 #prevBtn {
+  cursor: pointer;
   margin-left: 90%;
 }
 
 #nextBtn {
+  cursor: pointer;
   margin-right: 90%;
 }
 
@@ -258,16 +260,15 @@ body {
   margin-top: 10%;
   margin-left: 15%;
 }
-.logo-block{
-  display: none;
-}
+
 .promo_list {
   display: flex;
-  
+  flex-direction: column;
   justify-content: space-around;
   width: 660px;
   height: 669px;
 }
+
 .promo_list h1 {
   font-family: "Raleway";
   font-style: normal;
