@@ -237,12 +237,10 @@ body {
 }
 
 #prevBtn {
-  cursor: pointer;
   margin-left: 90%;
 }
 
 #nextBtn {
-  cursor: pointer;
   margin-right: 90%;
 }
 

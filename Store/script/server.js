@@ -13,6 +13,7 @@ const renderProducts = () => {
             <p class="content-block_text">${productItem.name}</p>
             <p class="content-block_text sum">${productItem.price}</p>
             <button type="button" element-id="${productItem.id}" class="content-block_button">Add to the cart</button>
+            <img class="wishLishImg" src="./img/wish.png">
         </div>
         `
     })
