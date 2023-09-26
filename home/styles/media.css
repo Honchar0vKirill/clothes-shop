@@ -16,6 +16,7 @@
     display: block;
   }
   .hero-section h1 {
+    text-align: center;
     font-size: 17px;
   }
   .hero-section p {
@@ -33,23 +34,31 @@
     margin: 10% 0;
   }
   .promo img {
-    width: 125%;
+    width: 100%;
   }
   .promo_list {
-    margin-left: -20px;
+    width: 100%;
+    margin-left: 0px;
   }
   .promo_container h1 {
+    width: 100%;
     margin-top: 550px;
-    margin-left: 170px;
+    margin-left: -15px;
     font-size: 15px;
+  }
+  .promo_container {
+    width: 100%;
   }
   .logo-block {
     position: absolute;
     display: flex;
     flex-direction: column;
     gap: 90px;
-    margin-left: 170px;
-    margin-top: 550px;
+    margin-left: -15px;
+    margin-top: 535px;
+  }
+  .promo_list_item {
+    width: 100%;
   }
   .logo-block img {
     width: 20px;
@@ -66,7 +75,7 @@
     margin-right: 30px;
   }
   .UserBlock {
-    margin-top: 900px;
+    margin-top: 500px;
   }
   .form {
     margin-top: 100px;
@@ -164,20 +173,16 @@
     margin-left: 10px;
   }
   .footer-menuP-link {
-    margin-right: 20px;
-    width: 450px;
+    margin-left: 15px;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
   }
   .footer-menuP {
-    font-size: 9px;
-    margin-left: 5px;
+    width: 44px;
+    font-size: 10px;
   }
   .followUs {
-    width: 100px;
-    font-size: 9px;
-    margin-left: 10px;
-  }
-  .followUs img {
-    width: 10px;
+    display: none;
   }
   footer {
     width: 320px;
@@ -201,7 +206,8 @@
     width: 20px;
   }
   .gpsP {
-    margin-left: -35px;
+    width: 150px;
+    margin-left: -20px;
     font-size: 7px;
   }
   .phoneNumberImg {
