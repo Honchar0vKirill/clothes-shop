@@ -103,6 +103,99 @@
   .main_content .content-block {
     width: 40%;
   }
+  .footer-logo {
+    width: 40px;
+    margin-top: 0px;
+    margin-left: 10px;
+  }
+  .footer-menuP-link {
+    margin-left: 15px;
+    -moz-column-gap: 0px;
+         column-gap: 0px;
+  }
+  .footer-menuP {
+    width: 44px;
+    font-size: 10px;
+  }
+  .followUs {
+    display: none;
+  }
+  footer {
+    width: 320px;
+  }
+  .contactsH1 {
+    font-size: 15px;
+  }
+  .mailImg {
+    margin-left: -30px;
+    width: 20px;
+  }
+  .mailP {
+    margin-left: -20px;
+    font-size: 8px;
+  }
+  .gps {
+    width: 100%;
+  }
+  .gpsImg {
+    margin-left: 10px;
+    width: 20px;
+  }
+  .gpsP {
+    width: 150px;
+    margin-left: -20px;
+    font-size: 7px;
+  }
+  .phoneNumberImg {
+    margin-left: -30px;
+    width: 20px;
+  }
+  .phoneNumberP {
+    margin-left: -35px;
+    font-size: 7px;
+  }
+  .telegramImg {
+    margin-left: 10px;
+    width: 20px;
+  }
+  .telegramP {
+    margin-left: -10px;
+    font-size: 7px;
+  }
+  .paymentContainer {
+    height: 50px;
+    gap: 20px;
+  }
+  .VISAblock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+  }
+  .imgVisa {
+    width: 60px;
+  }
+  .masterCardblock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+  }
+  .masterCardblock img {
+    width: 60px;
+  }
+  .applePayblock {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 30px;
+  }
+  .applePayblock img {
+    width: 60px;
+  }
 }
 @media (max-width: 600px) {
   .main_content .content-block {
