@@ -188,11 +188,11 @@
                     
                     <script>
                         // Отримуємо посилання на зображення і додаємо обробник подій
-                        var gpsImg = document.querySelector('.gpsImg');
+                        let gpsImg = document.querySelector('.gpsImg');
                         gpsImg.addEventListener('click', function(event) {
                             event.preventDefault(); // Відміняємо стандартну дію по кліку на посиланні
                             // Задаємо URL для карти і відкриваємо її в новому вікні або вкладці
-                            var mapUrl = 'https://maps.google.com?q=Київ, бульвар Лесі Українки';
+                            let mapUrl = 'https://maps.google.com?q=Київ, бульвар Лесі Українки';
                             window.open(mapUrl, '_blank');
                         });
                     </script>
